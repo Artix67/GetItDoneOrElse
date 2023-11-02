@@ -17,25 +17,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="<-"
+        android:text="@string/format"
         android:onClick= "previousMonthAction"
         android:textColor="@color/black"
         android:background="@null"
         android:textStyle="bold"
-        android:textSize="20sp">
-
-    </Button
-
-
-
-        >
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/MonthYearTV"
         android:layout_width="0dp"
         android:layout_weight="2"
         android:layout_height="wrap_content"
-        android:text="November 2023"
+        android:text="@string/november_2023"
         android:textSize="20sp"
         android:textAlignment="center"
          />
@@ -43,9 +37,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="->"
+        android:text="@string/forward"
         android:textColor="@color/black"
-        android:onClick ="NextMonthAction"
+        android:onClick ="nextMonthAction"
         android:background="@null"
         android:textStyle="bold"
         android:textSize="20sp"/>
@@ -60,7 +54,7 @@
            android:layout_width="0dp"
            android:layout_height="wrap_content"
            android:layout_weight="1"
-           android:text="SUN"
+           android:text="@string/sun"
            android:textColor="@color/black"
            android:textAlignment="center"
            android:textSize="16sp"/>
@@ -68,7 +62,7 @@
            android:layout_width="0dp"
            android:layout_height="wrap_content"
            android:layout_weight="1"
-           android:text="MON"
+           android:text="@string/mon"
            android:textColor="@color/black"
            android:textAlignment="center"
            android:textSize="16sp"/>
@@ -76,7 +70,7 @@
        android:layout_width="0dp"
        android:layout_height="wrap_content"
        android:layout_weight="1"
-       android:text="TUES"
+       android:text="@string/tues"
        android:textColor="@color/black"
        android:textAlignment="center"
        android:textSize="16sp"/>
@@ -84,7 +78,7 @@
        android:layout_width="0dp"
        android:layout_height="wrap_content"
        android:layout_weight="1"
-       android:text="WED"
+       android:text="@string/wed"
        android:textColor="@color/black"
        android:textAlignment="center"
        android:textSize="16sp"/>
@@ -92,7 +86,7 @@
        android:layout_width="0dp"
        android:layout_height="wrap_content"
        android:layout_weight="1"
-       android:text="THURS"
+       android:text="@string/thurs"
        android:textColor="@color/black"
        android:textAlignment="center"
        android:textSize="16sp"/>
@@ -100,7 +94,7 @@
            android:layout_width="0dp"
            android:layout_height="wrap_content"
            android:layout_weight="1"
-           android:text="FRI"
+           android:text="@string/fri"
            android:textColor="@color/black"
            android:textAlignment="center"
            android:textSize="16sp"/>
@@ -108,7 +102,7 @@
            android:layout_width="0dp"
            android:layout_height="wrap_content"
            android:layout_weight="1"
-           android:text="SAT"
+           android:text="@string/sat"
            android:textColor="@color/black"
            android:textAlignment="center"
            android:textSize="16sp"/>

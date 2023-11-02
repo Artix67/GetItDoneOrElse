@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Calendar</string>
+    <string name="format"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
+    <string name="sun">SUN</string>
+    <string name="mon">MON</string>
+    <string name="tues">TUES</string>
+    <string name="wed">WED</string>
+    <string name="thurs">THURS</string>
+    <string name="fri">FRI</string>
+    <string name="sat">SAT</string>
+    <string name="november_2023">November 2023</string>
 </resources>
