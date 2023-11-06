@@ -91,11 +91,8 @@ public class MainActivity extends AppCompatActivity implements  CalendarAdapter.
     @Override
     public void onItemClick(int position, String dayText)
     {
-        if(dayText.equals(""))
-        {
-            String message = selectDate + dayText + " " + monthYearFromDate(selectDate);
-            Toast.makeText(this, message, Toast.LENGTH_LONG).show();
-        }
+        String message = selectDate + dayText + " " + monthYearFromDate(selectDate);
+        Toast.makeText(this, dayText, Toast.LENGTH_LONG).show();
 
     }
 }

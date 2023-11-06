@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Calendar" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">#FF0055</item>
+         <item name="colorPrimary">#0B0205</item>
         <item name="colorAccent">@color/black</item>
     </style>
 
