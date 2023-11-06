@@ -14,6 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="Title for the screen"
         android:text="GIDE"
         android:textAlignment="textStart"
         android:textColor="#FFFFFF"
@@ -24,62 +25,86 @@
         app:layout_constraintHorizontal_bias="0.032"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintVertical_bias="0.011"
+        tools:ignore="HardcodedText,TextSizeCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
+        android:id="@+id/Add_daily_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="178dp"
+        android:layout_marginBottom="48dp"
         android:clickable="true"
+        android:contentDescription="Add's a item to the active daily list"
         android:src="@android:drawable/ic_menu_add"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="627dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="true"
+        tools:ignore="HardcodedText" />
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="410dp"
         android:layout_height="255dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="8dp"
         android:background="#1E1C1C"
         android:fillViewport="true"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="364dp">
+        app:layout_constraintBottom_toTopOf="@+id/Add_daily_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="A daily list for your to-dos for the selected day."
+        tools:ignore="HardcodedText">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
     </androidx.core.widget.NestedScrollView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/filter_button_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="18dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="298dp" />
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        app:layout_constraintEnd_toStartOf="@+id/filter_button_2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/filter_button_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="298dp" />
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        app:layout_constraintEnd_toStartOf="@+id/filter_button_3"
+        tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/filter_button_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="18dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="233dp"
-        tools:layout_editor_absoluteY="298dp" />
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        app:layout_constraintEnd_toStartOf="@+id/Add_filter_item"
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton4"
+        android:id="@+id/Add_filter_item"
         android:layout_width="49dp"
         android:layout_height="51dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
         android:clickable="true"
         android:src="@android:drawable/ic_menu_add"
-        tools:layout_editor_absoluteX="346dp"
-        tools:layout_editor_absoluteY="297dp" />
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="true"
+        android:contentDescription="Please add an additional filter item for your daily to-do list."
+        tools:ignore="HardcodedText" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
