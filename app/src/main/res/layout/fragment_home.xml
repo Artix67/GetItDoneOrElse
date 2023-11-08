@@ -5,106 +5,105 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".ui.home.HomeFragment">
-
-    <TextView
-        android:id="@+id/homescreen_title"
-        android:layout_width="146dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="Title for the screen"
-        android:text="GIDE"
-        android:textAlignment="textStart"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.032"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011"
-        tools:ignore="HardcodedText,TextSizeCheck" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/Add_daily_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="178dp"
-        android:layout_marginBottom="48dp"
-        android:clickable="true"
-        android:contentDescription="Add's a item to the active daily list"
-        android:src="@android:drawable/ic_menu_add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:focusable="true"
-        tools:ignore="HardcodedText" />
+    tools:context=".ui.home.HomeFragment" >
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/nestedScrollView"
-        android:layout_width="410dp"
-        android:layout_height="255dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="8dp"
-        android:background="#1E1C1C"
+        android:id="@+id/nested_calendar_event_viewer"
+        android:layout_width="408dp"
+        android:layout_height="281dp"
+        android:layout_marginTop="375dp"
+        android:layout_marginBottom="75dp"
+        android:contentDescription="This is a nest scroll view for the events of the selected calendar day"
         android:fillViewport="true"
-        app:layout_constraintBottom_toTopOf="@+id/Add_daily_item"
+        android:foreground="@color/material_dynamic_neutral10"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="A daily list for your to-dos for the selected day."
-        tools:ignore="HardcodedText">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,RedundantDescriptionCheck">
 
     </androidx.core.widget.NestedScrollView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_calendar_event_button"
+        android:layout_width="55dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="THis adds an event to the currently selected calendar day"
+        android:foreground="@drawable/add_icon"
+        android:src="@drawable/add_icon"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nested_calendar_event_viewer"
+        app:layout_constraintVertical_bias="1.0"
+        app:rippleColor="#595555"
+        tools:ignore="HardcodedText,RedundantDescriptionCheck" />
+
     <Button
-        android:id="@+id/filter_button_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="18dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
-        app:layout_constraintEnd_toStartOf="@+id/filter_button_2"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:id="@+id/filter_content_button_1"
+        android:layout_width="89dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/filter_button"
+        android:text="All"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:iconTint="#F8FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/nested_calendar_event_viewer"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText" />
 
-    <Button
-        android:id="@+id/filter_button_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="18dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
-        app:layout_constraintEnd_toStartOf="@+id/filter_button_3"
-        tools:ignore="HardcodedText" />
-
-    <Button
-        android:id="@+id/filter_button_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="18dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
-        app:layout_constraintEnd_toStartOf="@+id/Add_filter_item"
-        tools:ignore="HardcodedText" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/Add_filter_item"
-        android:layout_width="49dp"
-        android:layout_height="51dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="18dp"
-        android:clickable="true"
-        android:src="@android:drawable/ic_menu_add"
-        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        android:id="@+id/filter_content_addition_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="26dp"
+        android:contentDescription="This adds another filter button for calendar events"
+        android:foreground="@drawable/add_icon"
+        android:src="@drawable/add_icon"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/nested_calendar_event_viewer"
         app:layout_constraintEnd_toEndOf="parent"
-        android:focusable="true"
-        android:contentDescription="Please add an additional filter item for your daily to-do list."
+        app:layout_constraintStart_toEndOf="@+id/filter_content_button_3"
+        tools:ignore="HardcodedText,RedundantDescriptionCheck" />
+
+    <Button
+        android:id="@+id/filter_content_button_2"
+        android:layout_width="89dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/filter_button"
+        android:text="Today"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:iconTint="#F8FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/nested_calendar_event_viewer"
+        app:layout_constraintStart_toEndOf="@+id/filter_content_button_1"
         tools:ignore="HardcodedText" />
 
+    <Button
+        android:id="@+id/filter_content_button_3"
+        android:layout_width="89dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/filter_button"
+        android:text="Holidays"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:iconTint="#F8FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/nested_calendar_event_viewer"
+        app:layout_constraintStart_toEndOf="@+id/filter_content_button_2"
+        tools:ignore="HardcodedText,TextSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
