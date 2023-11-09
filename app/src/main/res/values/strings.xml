@@ -11,4 +11,6 @@
     <string name="sat">SAT</string>
     <string name="november_2023">November 2023</string>
     <string name="_1">1</string>
+    <string name="string"><![CDATA[<-]]></string>
+    <string name="weekly">weekly</string>
 </resources>
