@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Login2.0</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
