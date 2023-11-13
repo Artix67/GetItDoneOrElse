@@ -16,4 +16,9 @@
     <string name="pass">**********</string>
     <string name="or_else">Or else</string>
     <string name="login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="logarrow">➜</string>
+    <string name="to_sign_up">Sign Up!</string>
 </resources>
