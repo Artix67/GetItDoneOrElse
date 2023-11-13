@@ -13,4 +13,7 @@
     <string name="sign_up_button">"        Sign Up         "</string>
     <string name="sign_in">Sign In</string>
     <string name="arrow_placer">→</string>
+    <string name="pass">**********</string>
+    <string name="or_else">Or else</string>
+    <string name="login">Login</string>
 </resources>
