@@ -10,15 +10,15 @@
     <!-- Sign Up Header -->
 
     <TextView
-        android:layout_width="215dp"
+        android:layout_width="80dp"
         android:layout_height="131dp"
+        app:drawableTopCompat="@drawable/poin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        app:drawableTopCompat="@drawable/poin" />
+        app:layout_constraintVertical_bias="0.048" />
 
     <TextView
         android:id="@+id/textView"
@@ -57,17 +57,17 @@
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="358dp"
+        android:layout_height="67dp"
         android:fontFamily="@font/poppins"
         android:hint="@string/blank"
         android:padding="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintHorizontal_bias="0.359"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.068"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.248"
         app:layout_constraintWidth_percent=" .8"
         tools:text="@tools:sample/full_names" />
 
@@ -91,7 +91,7 @@
         android:id="@+id/editText3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/poppins"
         android:hint="@string/blank"
         android:padding="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,9 +100,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.19999999"
-        app:layout_constraintWidth_percent=" .8" />
+        app:layout_constraintWidth_percent=" .8"
+        tools:text="@tools:sample/cities" />
 
     <!-- Username Section -->
+
+    <!-- Password Section-->
 
     <TextView
         android:id="@+id/usernamePreView"
@@ -118,14 +121,14 @@
         app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436" />
+        app:layout_constraintVertical_bias="0.427" />
 
     <EditText
         android:id="@+id/editText7"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/poppins"
         android:hint="@string/blank"
         android:padding="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -133,10 +136,12 @@
         app:layout_constraintHorizontal_bias="0.353"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4"
-        app:layout_constraintVertical_bias="0.196"
-        app:layout_constraintWidth_percent=" .8" />
+        app:layout_constraintVertical_bias="0.163"
+        app:layout_constraintWidth_percent=" .8"
+        tools:text="@tools:sample/first_names" />
 
-    <!-- Password Section-->
+    <!-- reDo Password Section -->
+
 
     <TextView
         android:id="@+id/PasswordPreView"
@@ -152,13 +157,13 @@
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
+        app:layout_constraintVertical_bias="0.515" />
 
     <EditText
         android:id="@+id/editText5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/poppins"
         android:hint="@string/blank"
         android:padding="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -166,11 +171,12 @@
         app:layout_constraintHorizontal_bias="0.353"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.47"
-        app:layout_constraintWidth_percent=" .8" />
+        app:layout_constraintVertical_bias="0.431"
+        app:layout_constraintWidth_percent=" .8"
+        tools:text="@tools:sample/date/mmddyy" />
 
-    <!-- reDo Password Section -->
 
+    <!-- TOS section -->
 
     <TextView
         android:id="@+id/repeatPassPreView"
@@ -186,14 +192,14 @@
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65" />
+        app:layout_constraintVertical_bias="0.61" />
 
     <EditText
         android:id="@+id/editText8"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/poppins"
         android:hint="@string/blank"
         android:padding="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -201,11 +207,27 @@
         app:layout_constraintHorizontal_bias="0.353"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4"
-        app:layout_constraintVertical_bias="0.531"
-        app:layout_constraintWidth_percent=" .8" />
+        app:layout_constraintVertical_bias="0.456"
+        app:layout_constraintWidth_percent=" .8"
+        tools:text="@tools:sample/date/mmddyy" />
 
+    <TextView
+        android:id="@+id/tosBOLDPreView"
+        android:layout_width="99dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/terms_of_user"
+        android:textColor="@color/gray"
+        android:textSize="11.5sp"
+        android:textStyle=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.732" />
 
-    <!-- TOS section -->
     <TextView
         android:id="@+id/tosPreView"
         android:layout_width="79dp"
@@ -221,24 +243,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76" />
-
-    <TextView
-        android:id="@+id/tosBOLDPreView"
-        android:layout_width="99dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/terms_of_user"
-        android:textColor="@color/gray"
-        android:textSize="11.5sp"
-        android:textStyle=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.302"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76" />
+        app:layout_constraintVertical_bias="0.732" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -249,7 +254,7 @@
         app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.751"
+        app:layout_constraintVertical_bias="0.722"
         app:srcCompat="@color/select" />
 
     <!-- Sign Up-->
@@ -267,10 +272,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.838" />
+        app:layout_constraintVertical_bias="0.821" />
 
     <TextView
         android:layout_width="65dp"

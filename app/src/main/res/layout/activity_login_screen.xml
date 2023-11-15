@@ -16,9 +16,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333"
         app:srcCompat="@drawable/fiston" />
 
+    <ImageView
+        android:id="@+id/pasimageView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.479"
+        app:srcCompat="@drawable/password_logo" />
+
+    <ImageView
+        android:id="@+id/LogimageView"
+        android:layout_width="20dp"
+        android:layout_height="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.381"
+        app:srcCompat="@drawable/login_logo" />
 
     <ImageView
         android:id="@+id/imageViewG"
@@ -29,7 +51,7 @@
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533"
+        app:layout_constraintVertical_bias="0.505"
         app:srcCompat="@drawable/google_logo" />
 
     <TextView
@@ -68,8 +90,8 @@
 
     <TextView
         android:id="@+id/forgotPreView"
-        android:layout_width="98dp"
-        android:layout_height="25dp"
+        android:layout_width="103dp"
+        android:layout_height="33dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/poppins"
         android:text="@string/forgot_password"
@@ -78,15 +100,15 @@
         android:textStyle=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.252"
+        app:layout_constraintHorizontal_bias="0.246"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.549" />
+        app:layout_constraintVertical_bias="0.555" />
 
     <TextView
         android:id="@+id/nextPreView"
-        android:layout_width="57dp"
-        android:layout_height="48dp"
+        android:layout_width="40dp"
+        android:layout_height="43dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/poppins"
         android:text="@string/logarrow"
@@ -95,10 +117,10 @@
         android:textStyle=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintHorizontal_bias="0.859"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.479" />
+        app:layout_constraintVertical_bias="0.475" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -148,6 +170,9 @@
 
     <!-- Password Section-->
 
+    <!-- pass-->
+
+
     <TextView
         android:id="@+id/orPreView"
         android:layout_width="wrap_content"
@@ -159,10 +184,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609" />
+        app:layout_constraintVertical_bias="0.612" />
 
     <TextView
         android:id="@+id/usernamePreView"
@@ -178,11 +203,11 @@
         app:layout_constraintHorizontal_bias="0.371"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.386" />
 
     <EditText
         android:id="@+id/editText7"
-        android:layout_width="238dp"
+        android:layout_width="230dp"
         android:layout_height="52dp"
         android:fontFamily="@font/poppins_bold"
         android:hint="@string/blank"
@@ -192,11 +217,8 @@
         app:layout_constraintHorizontal_bias="0.433"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.477"
+        app:layout_constraintVertical_bias="0.481"
         app:layout_constraintWidth_percent=" .8" />
-
-    <!-- pass-->
-
 
     <TextView
         android:id="@+id/PasswordPreView"
@@ -209,24 +231,24 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintHorizontal_bias="0.376"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.486" />
+        app:layout_constraintVertical_bias="0.482" />
 
     <EditText
         android:id="@+id/editText5"
-        android:layout_width="241dp"
-        android:layout_height="59dp"
+        android:layout_width="225dp"
+        android:layout_height="53dp"
         android:fontFamily="@font/poppins_bold"
         android:hint="@string/blank"
         android:padding="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintHorizontal_bias="0.419"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.392"
+        app:layout_constraintVertical_bias="0.38"
         app:layout_constraintWidth_percent=" .8" />
 
 
