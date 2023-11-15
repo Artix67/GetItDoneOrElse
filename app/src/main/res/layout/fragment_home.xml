@@ -18,8 +18,10 @@
         android:foreground="@color/material_dynamic_neutral10"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="HardcodedText,RedundantDescriptionCheck">
 
     </androidx.core.widget.NestedScrollView>
@@ -108,8 +110,8 @@
 
     <CalendarView
         android:id="@+id/calendarView"
-        android:layout_width="359dp"
-        android:layout_height="238dp"
+        android:layout_width="355dp"
+        android:layout_height="225dp"
         android:layout_marginStart="18dp"
         android:layout_marginEnd="18dp"
         android:layout_marginBottom="12dp"
@@ -118,16 +120,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="353dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp"
-        android:foreground="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/filter_content_addition_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
