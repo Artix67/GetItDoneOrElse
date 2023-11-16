@@ -68,7 +68,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.248"
-        app:layout_constraintWidth_percent=" .8" />
+        app:layout_constraintWidth_percent=" .8"
+        tools:text="@tools:sample/full_names" />
 
     <TextView
         android:id="@+id/EmailPreView"

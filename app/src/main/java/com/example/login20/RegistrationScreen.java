@@ -13,14 +13,17 @@ import org.w3c.dom.Text;
 
 public class RegistrationScreen extends AppCompatActivity {
 
-    EditText name, email, username, password, reEnter;
+    EditText name;
+    EditText email;
+    EditText username;
+    EditText password;
+    EditText reEnter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_screen);
 
-        getSupportActionBar().hide();
 
         name = findViewById(R.id.editText4);
         email = findViewById(R.id.editText3);
@@ -37,27 +40,27 @@ public class RegistrationScreen extends AppCompatActivity {
 
     public void signup(View view) {
 
-        String nameuser = name.getText().toString();
+        String nameUser = name.getText().toString();
         String userName = username.getText().toString();
         String userEmail = email.getText().toString();
         String userPassword = password.getText().toString();
         String userReEnter = reEnter.getText().toString();
 
-        if (TextUtils.isEmpty(nameuser)){
+        if (TextUtils.isEmpty(nameUser)){
 
             Toast.makeText(this, "Name", Toast.LENGTH_SHORT).show();
-            return;
-
-        }
-        if (TextUtils.isEmpty(userName)){
-
-            Toast.makeText(this, "Username", Toast.LENGTH_SHORT).show();
             return;
 
         }
         if (TextUtils.isEmpty(userEmail)){
 
             Toast.makeText(this, "Email", Toast.LENGTH_SHORT).show();
+            return;
+
+        }
+        if (TextUtils.isEmpty(userName)){
+
+            Toast.makeText(this, "Username", Toast.LENGTH_SHORT).show();
             return;
 
         }
@@ -87,9 +90,9 @@ public class RegistrationScreen extends AppCompatActivity {
             return;
         }
 
-
         startActivity(new Intent(RegistrationScreen.this,MainActivity.class));
-
-
     }
+
+
+
 }
