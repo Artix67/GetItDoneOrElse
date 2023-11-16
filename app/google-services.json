@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "311316981138",
+    "project_id": "login2-0-fca10",
+    "storage_bucket": "login2-0-fca10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311316981138:android:b2b0cfb365ba997e718d4b",
+        "android_client_info": {
+          "package_name": "com.example.login20"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANp1WNsbVv7ULn2tz4HIKz8yaa8wJ9EeI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
