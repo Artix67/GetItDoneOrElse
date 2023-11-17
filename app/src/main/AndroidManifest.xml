@@ -27,7 +27,7 @@
             android:name=".LoginScreen"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityMiki"
             android:exported="true">
 
         </activity>

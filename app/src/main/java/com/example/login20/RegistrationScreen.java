@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 public class RegistrationScreen extends AppCompatActivity {
 
     EditText name;
@@ -90,7 +88,7 @@ public class RegistrationScreen extends AppCompatActivity {
             return;
         }
 
-        startActivity(new Intent(RegistrationScreen.this,MainActivity.class));
+        startActivity(new Intent(RegistrationScreen.this, MainActivityMiki.class));
     }
 
 
