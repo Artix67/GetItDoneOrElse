@@ -1,6 +1,5 @@
 package com.example.calendar;
 
-import static com.example.calendar.CalendarUtilities.daysInMonthArray;
 import static com.example.calendar.CalendarUtilities.daysInWeekArray;
 import static com.example.calendar.CalendarUtilities.monthYearFromDate;
 
@@ -8,20 +7,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.time.LocalDate;
-import java.time.YearMonth;
-import java.time.format.DateTimeFormatter;
+
 import java.util.ArrayList;
 
 public class WeekViewActivity extends AppCompatActivity  implements  CalendarAdapter.OnItemListener {
 
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
+
+    private ListView eventListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +34,7 @@ public class WeekViewActivity extends AppCompatActivity  implements  CalendarAda
 
         calendarRecyclerView = findViewById(R.id.calendarRecyclerView);
         monthYearText = findViewById(R.id.MonthYearTV);
+        eventListView = findViewById(R.id.eventListView);
     }
 
     private void setWeekView()
@@ -44,37 +46,13 @@ public class WeekViewActivity extends AppCompatActivity  implements  CalendarAda
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(),7);
         calendarRecyclerView.setLayoutManager(layoutManager);
         calendarRecyclerView.setAdapter(calendarAdapter);
+        setEventAdapter();
     }
 
-
-
-    public static ArrayList<String> daysInMonthArray(LocalDate Date)
+    public void previousWeekAction(View view)
     {
-        ArrayList<String> dayInMonthArray = new ArrayList<>();
-        YearMonth yearMonth = YearMonth.from(Date);
-        int daysInMonth = yearMonth.lengthOfMonth();
-        LocalDate firstOfMonth = CalendarUtilities.selectDate.withDayOfMonth(1);
-        int dayOfWeek = firstOfMonth.getDayOfWeek().getValue();
-
-        for (int i = 1; i <= 42; i++)
-        {
-            if(i <= dayOfWeek || i > daysInMonth + dayOfWeek)
-            {
-                dayInMonthArray.add("");
-            }
-            else
-            {
-                dayInMonthArray.add(String.valueOf(i - dayOfWeek));
-            }
-
-        }
-        return  dayInMonthArray;
-    }
-
-    public String monthYearFromDate(LocalDate date)
-    {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM yyyy");
-        return date.format(formatter);
+        CalendarUtilities.selectDate = CalendarUtilities.selectDate.minusWeeks(1);
+        setWeekView();
     }
 
     public void nextWeekAction(View view)
@@ -85,17 +63,38 @@ public class WeekViewActivity extends AppCompatActivity  implements  CalendarAda
     @Override
     public void onItemClick(int position, LocalDate date)
     {
-       CalendarUtilities.selectDate = date;
-       setWeekView();
-
-    }
-
-    public void previousWeekAction(View view)
-    {
-        CalendarUtilities.selectDate = CalendarUtilities.selectDate.minusWeeks(1);
+        CalendarUtilities.selectDate = date;
         setWeekView();
+
+    }
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+        setEventAdapter();
+    }
+    private void setEventAdapter()
+    {
+
+        ArrayList<Event> dailyEvents = Event.eventsForDate(CalendarUtilities.selectDate);
+        EventAdapter eventAdapter = new EventAdapter(getApplicationContext(),dailyEvents);
+        eventListView.setAdapter(eventAdapter);
     }
 
-    public void newEventAction(View view) {
+
+
+
+
+
+
+
+    public void newEventAction(View view)
+    {
+        startActivity(new Intent(this, EventEditActivity.class));
+    }
+
+    public void dailyAction(View view)
+    {
+        startActivity(new Intent(this, DailyCalendarActivity.class));
     }
 }

@@ -13,4 +13,10 @@
     <string name="_1">1</string>
     <string name="string"><![CDATA[<-]]></string>
     <string name="weekly">weekly</string>
+    <string name="name">Name</string>
+    <string name="date" />
+    <string name="Date" />
+    <string name="time">Time</string>
+    <string name="Time" />
+    <string name="_10_00">10:00</string>
 </resources>

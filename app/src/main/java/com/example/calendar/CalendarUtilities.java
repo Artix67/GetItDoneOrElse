@@ -3,6 +3,7 @@ package com.example.calendar;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -10,33 +11,63 @@ import java.util.ArrayList;
 public class CalendarUtilities
 {
     public static LocalDate selectDate;
+    public static String formattedDate(LocalDate date)
+    {
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy");
+        return date.format(formatter);
+    }
+    public static String formattedTime(LocalTime time)
+    {
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss a");
+        return time.format(formatter);
+    }
+
+    public static String formattedShortTime(LocalTime time)
+    {
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+        return time.format(formatter);
+    }
 
     public static String monthYearFromDate(LocalDate date)
     {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM yyyy");
         return date.format(formatter);
     }
-    public static ArrayList<LocalDate> daysInMonthArray(LocalDate Date)
+    public static String monthDayFromDate(LocalDate date)
     {
-        ArrayList<LocalDate> dayInMonthArray = new ArrayList<>();
-        YearMonth yearMonth = YearMonth.from(Date);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d");
+        return date.format(formatter);
+    }
+    public static ArrayList<LocalDate> daysInMonthArray()
+    {
+        ArrayList<LocalDate> daysInMonthArray = new ArrayList<>();
+
+        YearMonth yearMonth = YearMonth.from(selectDate);
         int daysInMonth = yearMonth.lengthOfMonth();
+
+        LocalDate prevMonth = selectDate.minusMonths(1);
+        LocalDate nextMonth = selectDate.plusMonths(1);
+
+        YearMonth prevYearMonth = YearMonth.from(prevMonth);
+        int prevDaysInMonth = prevYearMonth.lengthOfMonth();
+
         LocalDate firstOfMonth = CalendarUtilities.selectDate.withDayOfMonth(1);
         int dayOfWeek = firstOfMonth.getDayOfWeek().getValue();
 
-        for (int i = 1; i <= 42; i++)
+        for(int i = 1; i <= 42; i++)
         {
-            if(i <= dayOfWeek || i > daysInMonth + dayOfWeek)
-            {
-                dayInMonthArray.add(null);
-            }
+            if(i <= dayOfWeek)
+                daysInMonthArray.add(LocalDate.of(prevMonth.getYear(),prevMonth.getMonth(),prevDaysInMonth + i - dayOfWeek));
+            else if(i > daysInMonth + dayOfWeek)
+                daysInMonthArray.add(LocalDate.of(nextMonth.getYear(),nextMonth.getMonth(),i - dayOfWeek - daysInMonth));
             else
-            {
-                dayInMonthArray.add(LocalDate.of(selectDate.getYear(),selectDate.getMonth(), i - dayOfWeek));
-            }
-
+                daysInMonthArray.add(LocalDate.of(selectDate.getYear(),selectDate.getMonth(),i - dayOfWeek));
         }
-        return  dayInMonthArray;
+
+        return  daysInMonthArray;
     }
 
 
@@ -67,6 +98,7 @@ public class CalendarUtilities
         }
         return  null;
     }
+
 
 }
 
