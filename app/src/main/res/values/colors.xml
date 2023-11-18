@@ -19,5 +19,7 @@
     <color name="fadeWhite">#E0E0E0</color>
     <color name="gray">#84807F</color>
     <color name="select">#E4E4E4</color>
-
+    <color name="randomStatusBarColor">#FF0055</color>
+    <color name="dismissStatusBarColor">#000000</color>
+    <color name="imageView">#1A1A1A</color>
 </resources>

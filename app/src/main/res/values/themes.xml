@@ -5,5 +5,17 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="Theme.Gide.Dismiss" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#000000</item>
+    </style>
+
+    <style name="Theme.Gide.Random" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">#FF0055</item>
+        <item name="colorPrimaryDark">#FF0055</item>
+        <item name="colorAccent">#FF0055</item>
+    </style>
+
     <style name="Theme.GetItDoneOrElseApplication" parent="Base.Theme.GetItDoneOrElseApplication" />
 </resources>

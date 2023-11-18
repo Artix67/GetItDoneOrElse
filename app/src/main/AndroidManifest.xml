@@ -69,6 +69,24 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+
+        <activity
+            android:name=".natalie.DismissActivity"
+            android:theme="@style/Theme.Gide.Dismiss"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".natalie.RandomActivity"
+            android:theme="@style/Theme.Gide.Random"
+            android:exported="true">
+        </activity>
+
     </application>
 
 </manifest>

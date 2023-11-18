@@ -46,6 +46,8 @@ public class MainActivityApplication extends AppCompatActivity implements View.O
             startActivity(intent);
         } else if (view.getId() == R.id.buttonNatalie) {
             // Your code for buttonNatalie click
+            Intent intent = new Intent(this, com.example.getitdoneorelseapplication.natalie.DismissActivity.class);
+            startActivity(intent);
         } else if (view.getId() == R.id.buttonArtix) {
             // Your code for buttonArtix click
             Intent intent = new Intent(this, com.example.getitdoneorelseapplication.artix.MainActivityArtix.class);
