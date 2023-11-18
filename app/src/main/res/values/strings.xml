@@ -22,4 +22,25 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="full_name">Full Name</string>
+    <string name="blank">‎ </string>
+    <string name="full_name_pre">Full Name</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="i_agree_to_the">I agree to the</string>
+    <string name="terms_of_user">Terms of User</string>
+    <string name="sign_up_button">"        Sign Up         "</string>
+    <string name="sign_in">Sign In</string>
+    <string name="arrow_placer">→</string>
+    <string name="pass">**********</string>
+    <string name="or_else">Or else</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="logarrow">➜</string>
+    <string name="to_sign_up">Sign Up!</string>
 </resources>

@@ -42,6 +42,8 @@ public class MainActivityApplication extends AppCompatActivity implements View.O
             startActivity(intent);
         } else if (view.getId() == R.id.buttonMiki) {
             // Your code for buttonMiki click
+            Intent intent = new Intent(this, com.example.getitdoneorelseapplication.login.RegistrationScreen.class);
+            startActivity(intent);
         } else if (view.getId() == R.id.buttonNatalie) {
             // Your code for buttonNatalie click
         } else if (view.getId() == R.id.buttonArtix) {
