@@ -46,6 +46,8 @@ public class MainActivityApplication extends AppCompatActivity implements View.O
             // Your code for buttonNatalie click
         } else if (view.getId() == R.id.buttonArtix) {
             // Your code for buttonArtix click
+            Intent intent = new Intent(this, com.example.getitdoneorelseapplication.artix.MainActivityArtix.class);
+            startActivity(intent);
         }
     }
 }
