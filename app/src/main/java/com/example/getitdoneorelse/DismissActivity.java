@@ -1,7 +1,7 @@
 package com.example.getitdoneorelse;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.HandlerThread;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -17,12 +17,7 @@ import java.util.Locale;
 
 public class DismissActivity extends AppCompatActivity {
 
-    private final HandlerThread thread;
 
-    // Default constructor
-    public DismissActivity() {
-        this.thread = null;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,35 +50,17 @@ public class DismissActivity extends AppCompatActivity {
     }
 
     private void updateTime(TextView timeTextView) {
-        try {
-            // Get the current time
-            SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm a", Locale.getDefault());
-            String currentTime = dateFormat.format(new Date());
+        // Get the current time
+        SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm a", Locale.getDefault());
+        String currentTime = dateFormat.format(new Date());
 
-            // Set the current time to the timeTextView
-            timeTextView.setText(currentTime);
-        } catch (Exception exception) {
-            exception.printStackTrace();
-        }
+        // Set the current time to the timeTextView
+        timeTextView.setText(currentTime);
     }
 
     // Start the RandomActivity
     private void startRandomActivity() {
         Intent user = new Intent(DismissActivity.this, RandomActivity.class);
         startActivity(user);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        // Quit the handler thread safely when the activity is destroyed
-        if (thread != null) {
-            try {
-                thread.quitSafely();
-            } catch (Exception exception) {
-                exception.printStackTrace();
-            }
-
-        }
     }
 }

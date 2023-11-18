@@ -1,5 +1,10 @@
 package com.example.getitdoneorelse;
 
+import static com.example.getitdoneorelse.R.id.TEXTVIEW1;
+import static com.example.getitdoneorelse.R.id.TEXTVIEW2;
+import static com.example.getitdoneorelse.R.id.TEXTVIEW3;
+import static com.example.getitdoneorelse.R.id.TEXTVIEW4;
+
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,20 +17,17 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Random;
 
 public class RandomActivity extends Activity {
 
-    private final ThreadLocal<Handler> handler = ThreadLocal.withInitial(() -> new Handler(Looper.getMainLooper()));
+    private final Handler handler = new Handler(Looper.getMainLooper());
     private List<String> taskList;
     private List<TextView> textViews;
     private int spin;
     private int taskWordIndex;
     private String currentTaskWord;
-
-    // Create a copy of the original task list
-    private final List<String> originalTaskList = new ArrayList<>();
+    private List<String> originalTaskList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,24 +38,19 @@ public class RandomActivity extends Activity {
         Button randomButton = findViewById(R.id.randomButton);
         randomButton.setOnClickListener(this::onRandomClick);
 
-        originalTaskList.add("Mop");
-        originalTaskList.add("Sweep");
-        originalTaskList.add("Vacuum");
-        originalTaskList.add("Wash dishes");
-        originalTaskList.add("Do laundry");
-        originalTaskList.add("Take out trash");
-        originalTaskList.add("Make dinner");
-        originalTaskList.add("Exercise");
-        originalTaskList.add("Take a break");
-        originalTaskList.add("Review budget");
-        originalTaskList.add("Clean one room");
-        originalTaskList.add("Volunteer");
-        originalTaskList.add("Family time");
-        originalTaskList.add("Social time");
+        // Create a copy of the original task list
+        originalTaskList = new ArrayList<>();
+        originalTaskList.add("MOP");
+        originalTaskList.add("SWEEP");
+        originalTaskList.add("VACUUM");
+        originalTaskList.add("DISHES");
+        originalTaskList.add("LAUNDRY");
+        originalTaskList.add("TAKE OUT TRASH");
+        originalTaskList.add("MAKE DINNER");
 
         // Initialize the list of TextViews
         textViews = new ArrayList<>();
-        for (int i : new int[]{R.id.TEXTVIEW1, R.id.TEXTVIEW2, R.id.TEXTVIEW3, R.id.TEXTVIEW4}) {
+        for (int i : new int[]{TEXTVIEW1, TEXTVIEW2, TEXTVIEW3, TEXTVIEW4}) {
             textViews.add(findViewById(i));
         }
 
@@ -61,49 +58,38 @@ public class RandomActivity extends Activity {
         taskList = new ArrayList<>(originalTaskList);
     }
 
-
     // Handle the click event for the random button
     public void onRandomClick(View view) {
         if (!taskList.isEmpty()) {
             spin = 0;
             taskWordIndex = 0;
             currentTaskWord = "";
-            // Make TEXTVIEW2 visible during the animation
-            textViews.get(1).setVisibility(View.VISIBLE);
-            // Set an onClickListener for TEXTVIEW2 after the spinning stops
-            textViews.get(1).setOnClickListener(v -> {
-                finish(); // Close the activity when TEXTVIEW2 is clicked
-            });
             scrollForward(0);
         }
     }
 
     // Scroll the text forward in the text views
-    private void scrollForward(int currentTaskView) {
+    private void scrollForward(int currentViewIndex) {
         int maxSpin = 6;
         if (spin < maxSpin) {
-            updateCurrentTaskWord(currentTaskView);
+            updateCurrentTaskWord(currentViewIndex);
 
             for (int i = 0; i < textViews.size(); i++) {
-                textViews.get(i).setText((i == currentTaskView) ? currentTaskWord : "");
+                textViews.get(i).setText((i == currentViewIndex) ? currentTaskWord : "");
             }
 
-            startAnimation(textViews.get(currentTaskView));
+            startAnimation(textViews.get(currentViewIndex));
 
             // Delay the next scroll forward action
-            Objects.requireNonNull(handler.get()).postDelayed(() -> scrollForward((currentTaskView + 1) % textViews.size()), 42);
+            handler.postDelayed(() -> scrollForward((currentViewIndex + 1) % textViews.size()), 42);
 
             // Update the spin count
-            if (currentTaskView == 1) {
+            if (currentViewIndex == 1) {
                 spin++;
             }
         } else {
             // Display a random task word
             displayRandomTaskWord();
-
-            // Make TEXTVIEW2 visible and clickable
-            textViews.get(1).setVisibility(View.VISIBLE);
-            textViews.get(1).setClickable(true);
         }
     }
 
@@ -117,7 +103,7 @@ public class RandomActivity extends Activity {
 
     // Start the animation to move the text view
     private void startAnimation(TextView textView) {
-        ObjectAnimator translationAnimator = ObjectAnimator.ofFloat(textView, "translationY", 70, 100);
+        ObjectAnimator translationAnimator = ObjectAnimator.ofFloat(textView, "translationY", 1, 48);
         translationAnimator.setDuration(1200);
         translationAnimator.setInterpolator(new DecelerateInterpolator());
         translationAnimator.start();
@@ -130,10 +116,9 @@ public class RandomActivity extends Activity {
             taskList = new ArrayList<>(originalTaskList);
         }
         Random randomizer = new Random();
-        int randomTaskWord = randomizer.nextInt(taskList.size());
-        String randomTask = taskList.get(randomTaskWord);
+        int randomTaskIndex = randomizer.nextInt(taskList.size());
+        String randomTask = taskList.get(randomTaskIndex);
         textViews.get(1).setText(randomTask);
         taskList.remove(randomTask);
     }
 }
-

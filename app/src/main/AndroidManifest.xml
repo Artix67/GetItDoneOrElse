@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.getitdoneorelse">
+xmlns:tools="http://schemas.android.com/tools"
+package="com.example.getitdoneorelse">
 
     <application
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/Gide"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+    android:dataExtractionRules="@xml/data_extraction_rules"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/Gide"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.Gide"
+    tools:targetApi="s">
 
         <activity
-            android:name=".DismissActivity"
-            android:theme="@style/Theme.Gide.Dismiss"
-            android:exported="true">
+        android:name=".DismissActivity"
+        android:exported="true"
+        android:theme="@style/Theme.Gide.Dismiss">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -20,11 +22,9 @@
         </activity>
 
         <activity
-            android:name=".RandomActivity"
-            android:theme="@style/Theme.Gide.Random"
-            android:exported="true">
+        android:name=".RandomActivity"
+        android:exported="true"
+        android:theme="@style/Theme.Gide.Random">
         </activity>
-
     </application>
-
 </manifest>
