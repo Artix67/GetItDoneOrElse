@@ -24,7 +24,7 @@ public class MainActivityCalendar extends AppCompatActivity implements  Calendar
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_kevin);
         initWidgets();
         CalendarUtilities.selectDate = LocalDate.now();
         setMonthView();
