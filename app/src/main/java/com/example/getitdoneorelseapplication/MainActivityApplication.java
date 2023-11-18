@@ -38,6 +38,8 @@ public class MainActivityApplication extends AppCompatActivity implements View.O
     public void onClick(View view) {
         if (view.getId() == R.id.buttonKevin) {
             // Your code for buttonKevin click
+            Intent intent = new Intent(this, com.example.getitdoneorelseapplication.calendar.MainActivityCalendar.class);
+            startActivity(intent);
         } else if (view.getId() == R.id.buttonMiki) {
             // Your code for buttonMiki click
         } else if (view.getId() == R.id.buttonNatalie) {
