@@ -7,6 +7,8 @@
     android:background="@drawable/backdroplog"
     tools:context=".LoginScreen">
 
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="405dp"
@@ -41,6 +43,8 @@
         app:layout_constraintVertical_bias="0.39"
         app:srcCompat="@drawable/login_logo" />
 
+
+    <!-- ADD:: android:onClick="signinWgoogle" -->
     <ImageView
         android:id="@+id/imageViewG"
         android:layout_width="381dp"
@@ -106,20 +110,21 @@
 
     <TextView
         android:id="@+id/nextPreView"
-        android:layout_width="40dp"
-        android:layout_height="43dp"
+        android:layout_width="50dp"
+        android:layout_height="53dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/poppins"
+        android:onClick="signIn"
         android:text="@string/logarrow"
         android:textColor="@color/offWhite"
         android:textSize="30sp"
         android:textStyle=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintHorizontal_bias="0.892"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475" />
+        app:layout_constraintVertical_bias="0.482" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -135,20 +140,21 @@
 
     <TextView
         android:id="@+id/signupPreView"
-        android:layout_width="52dp"
-        android:layout_height="18dp"
+        android:layout_width="62dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/poppins_bold"
+        android:onClick="signUp"
         android:text="@string/to_sign_up"
         android:textColor="@color/fadeWhite"
         android:textSize="11.5sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintHorizontal_bias="0.708"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963" />
+        app:layout_constraintVertical_bias="1.005" />
 
     <TextView
         android:id="@+id/loginPreView"
@@ -193,7 +199,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
-        android:text="@string/username"
+        android:text="@string/blank"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -205,18 +211,21 @@
         app:layout_constraintVertical_bias="0.394" />
 
     <EditText
-        android:id="@+id/editText7"
-        android:layout_width="230dp"
-        android:layout_height="52dp"
-        android:fontFamily="@font/poppins_bold"
-        android:hint="@string/blank"
-        android:padding="17dp"
+        android:id="@+id/editText5"
+        android:layout_width="184dp"
+        android:layout_height="53dp"
+        android:fontFamily="@font/poppins"
+        android:hint="@string/pass"
+        android:inputType="textPassword"
+        android:padding="4dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.481"
+        app:layout_constraintVertical_bias="0.482"
         app:layout_constraintWidth_percent=" .8" />
 
     <TextView
@@ -224,7 +233,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
-        android:text="@string/pass"
+        android:text="@string/blank"
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -236,18 +245,20 @@
         app:layout_constraintVertical_bias="0.482" />
 
     <EditText
-        android:id="@+id/editText5"
-        android:layout_width="225dp"
+        android:id="@+id/editText7"
+        android:layout_width="184dp"
         android:layout_height="53dp"
         android:fontFamily="@font/poppins"
-        android:hint="@string/blank"
-        android:padding="17dp"
+        android:hint="@string/username"
+        android:padding="4dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.388"
+        app:layout_constraintVertical_bias="0.382"
         app:layout_constraintWidth_percent=" .8" />
 
 
