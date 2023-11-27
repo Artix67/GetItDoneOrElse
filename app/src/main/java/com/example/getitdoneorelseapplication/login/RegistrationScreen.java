@@ -1,5 +1,8 @@
 package com.example.getitdoneorelseapplication.login;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -7,8 +10,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import com.example.getitdoneorelseapplication.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RegistrationScreen extends AppCompatActivity {
 
@@ -18,10 +24,20 @@ public class RegistrationScreen extends AppCompatActivity {
     EditText password;
     EditText reEnter;
 
+    private FirebaseAuth auth;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_screen);
+
+
+        auth = FirebaseAuth.getInstance();
+       // if (auth.getCurrentUser() !=null){
+           // startActivity(new Intent(RegistrationScreen.this, MainActivityMiki.class));
+           // finish();
+       // }
 
 
         name = findViewById(R.id.editText4);
@@ -89,7 +105,23 @@ public class RegistrationScreen extends AppCompatActivity {
             return;
         }
 
-        startActivity(new Intent(RegistrationScreen.this, MainActivityMiki.class));
+        auth.createUserWithEmailAndPassword(userEmail,userPassword)
+                .addOnCompleteListener(RegistrationScreen.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+
+                        if(task. isSuccessful()){
+                            Toast.makeText(RegistrationScreen.this, "Successful Login!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(RegistrationScreen.this, MainActivityMiki.class));
+                        }else {
+                            Toast.makeText(RegistrationScreen.this, " Failed Connection." +task.getException(), Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                });
+
+
+        //startActivity(new Intent(RegistrationScreen.this, MainActivityMiki.class));
     }
 
 
