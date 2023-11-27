@@ -13,9 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@null"
+        android:color ="@null"
+        android:backgroundTint="@color/white"
         android:onClick="weeklyAction"
-        android:text="@string/weekly"
+        android:text="Weekly"
         android:textColor="#FF0055"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -31,10 +32,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@null"
+            android:backgroundTint="@color/white"
             android:onClick="previousMonthAction"
             android:text="@string/string"
             android:textColor="#FF0055"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <TextView
@@ -45,17 +47,18 @@
             android:text="@string/november_2023"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@null"
+            android:backgroundTint="@color/white"
             android:onClick="nextMonthAction"
             android:text="@string/forward"
             android:textColor="#FF0055"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -71,7 +74,8 @@
             android:text="@string/sun"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
+
 
         <TextView
             android:layout_width="0dp"
@@ -80,7 +84,7 @@
             android:text="@string/mon"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="0dp"
@@ -89,7 +93,7 @@
             android:text="@string/tues"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="0dp"
@@ -98,16 +102,16 @@
             android:text="@string/wed"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/thurs"
+            android:text="THUR"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="0dp"
@@ -116,7 +120,7 @@
             android:text="@string/fri"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
 
         <TextView
@@ -126,7 +130,7 @@
             android:text="@string/sat"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
 
 
