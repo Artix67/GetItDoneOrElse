@@ -79,16 +79,17 @@
         android:layout_marginEnd="18dp"
         android:layout_marginBottom="56dp"
         android:foreground="@color/cardview_dark_background"
-        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton2"
+        app:layout_constraintBottom_toTopOf="@+id/EventFilterButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
+        android:id="@+id/EventFilterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="25dp"
+        android:contentDescription="This will allow you to add a custom filter to view certain events"
         android:clickable="true"
         android:foreground="@drawable/add_icon"
         android:src="@color/black"
@@ -97,11 +98,12 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
+        android:id="@+id/AddEventButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="176dp"
         android:layout_marginBottom="15dp"
+        android:contentDescription="This will allow you to "
         android:clickable="true"
         android:foreground="@drawable/add_icon"
         android:src="@color/black"
