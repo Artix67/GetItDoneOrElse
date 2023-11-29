@@ -29,7 +29,7 @@ public class MainActivityArtix extends AppCompatActivity {
         // menu should be considered as top level destinations.
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupWithNavController(navView, navController);
-        
+
     }
 
     newEvent newobj = new newEvent();
