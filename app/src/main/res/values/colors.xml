@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="blackDecor">#0C0C0C</color>
+    <color name="redPink">#FF0055</color>
+    <color name="offWhite">#FFE0EA</color>
+    <color name="barGray">#333333</color>
+    <color name="fistGrayD">#A1A1A1</color>
+    <color name="fistGrayL">#C2C2C2</color>
+    <color name="fistGrayDL">#B1B1B1</color>
+    <color name="fadeWhite">#E0E0E0</color>
+    <color name="gray">#84807F</color>
+    <color name="select">#E4E4E4</color>
+    <color name="randomStatusBarColor">#FF0055</color>
+    <color name="dismissStatusBarColor">#000000</color>
+    <color name="imageView">#1A1A1A</color>
+</resources>
