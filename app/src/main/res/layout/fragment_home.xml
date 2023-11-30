@@ -9,8 +9,8 @@
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nested_calendar_event_viewer"
-        android:layout_width="408dp"
-        android:layout_height="281dp"
+        android:layout_width="411dp"
+        android:layout_height="282dp"
         android:layout_marginTop="375dp"
         android:layout_marginBottom="75dp"
         android:contentDescription="This is a nest scroll view for the events of the selected calendar day"
@@ -22,7 +22,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:ignore="HardcodedText,RedundantDescriptionCheck">
+        tools:ignore="HardcodedText,RedundantDescriptionCheck"
+        >
 
     </androidx.core.widget.NestedScrollView>
 
@@ -35,6 +36,9 @@
         android:background="@drawable/filter_button"
         android:text="All"
         android:textColor="#FFFFFF"
+        android:textColorHighlight="#595656"
+        android:textColorLink="#616060"
+        android:textSize="27px"
         android:textStyle="bold"
         app:iconTint="#F8FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/nested_calendar_event_viewer"
@@ -50,6 +54,8 @@
         android:background="@drawable/filter_button"
         android:text="Today"
         android:textColor="#FFFFFF"
+        android:textSize="27px"
+        android:textColorLink="@color/barGray"
         android:textStyle="bold"
         app:iconTint="#F8FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/nested_calendar_event_viewer"
@@ -65,6 +71,9 @@
         android:background="@drawable/filter_button"
         android:text="Holidays"
         android:textColor="#FFFFFF"
+        android:textSize="27px"
+        android:textColorHighlight="@color/barGray"
+        android:textColorLink="@color/barGray"
         android:textStyle="bold"
         app:iconTint="#F8FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/nested_calendar_event_viewer"
@@ -91,6 +100,7 @@
         android:layout_marginBottom="25dp"
         android:contentDescription="This will allow you to add a custom filter to view certain events"
         android:clickable="true"
+        android:contentDescription="Adds a filter for events below"
         android:foreground="@drawable/add_icon"
         android:src="@color/black"
         app:backgroundTint="#00FFFFFF"
@@ -105,6 +115,7 @@
         android:layout_marginBottom="15dp"
         android:contentDescription="This will allow you to "
         android:clickable="true"
+        android:contentDescription="Adds a new event on the current day chosen"
         android:foreground="@drawable/add_icon"
         android:src="@color/black"
         app:backgroundTint="#00FFFFFF"

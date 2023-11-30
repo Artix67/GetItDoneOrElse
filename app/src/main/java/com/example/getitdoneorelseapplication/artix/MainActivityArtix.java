@@ -1,16 +1,16 @@
 package com.example.getitdoneorelseapplication.artix;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+import com.example.getitdoneorelseapplication.calendar.EventEditActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import com.example.getitdoneorelseapplication.R;
+import com.example.getitdoneorelseapplication.calendar.EventEditActivity;
 import com.example.getitdoneorelseapplication.databinding.ActivityMainArtrixBinding;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivityArtix extends AppCompatActivity {
 
@@ -23,15 +23,14 @@ public class MainActivityArtix extends AppCompatActivity {
         binding = ActivityMainArtrixBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        BottomNavigationView navView = findViewById(R.id.nav_view);
+        Button myButton = findViewById(R.id.floatingActionButton3);
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
-        NavigationUI.setupWithNavController(navView, navController);
-
+        myButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EventEditActivity eventEditActivity = new EventEditActivity();
+                eventEditActivity.onCreate(savedInstanceState);
+            }
+        });
     }
-
-    newEvent newobj = new newEvent();
-
 }
