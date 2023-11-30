@@ -50,4 +50,5 @@
     <string name="imageview" >imageview</string>
     <string name="exit_button">Exit Button</string>
     <string name="random">RANDOM</string>
+    <string name="google">google</string>
 </resources>

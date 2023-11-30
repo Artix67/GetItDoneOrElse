@@ -28,7 +28,7 @@
         app:layout_constraintHorizontal_bias="0.245"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.479"
+        app:layout_constraintVertical_bias="0.484"
         app:srcCompat="@drawable/password_logo" />
 
     <ImageView
@@ -40,7 +40,7 @@
         app:layout_constraintHorizontal_bias="0.243"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39"
+        app:layout_constraintVertical_bias="0.398"
         app:srcCompat="@drawable/login_logo" />
 
 
@@ -56,6 +56,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.505"
         app:srcCompat="@drawable/google_logo" />
+
 
     <TextView
         android:id="@+id/tosPreView"
@@ -151,10 +152,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintHorizontal_bias="0.68"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.005" />
+        app:layout_constraintVertical_bias="1.00" />
 
     <TextView
         android:id="@+id/loginPreView"
@@ -258,7 +259,7 @@
         app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.382"
+        app:layout_constraintVertical_bias="0.396"
         app:layout_constraintWidth_percent=" .8" />
 
 
