@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GetItDoneOrElseApplication"
         tools:targetApi="31">
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivityApplication"
             android:exported="true">
@@ -50,7 +54,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login.RegistrationScreen"
+        <activity
+            android:name=".login.RegistrationScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -63,31 +68,26 @@
             android:exported="false" />
         <activity
             android:name=".login.MainActivityMiki"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-
         <activity
             android:name=".natalie.DismissActivity"
-            android:theme="@style/Theme.Gide.Dismiss"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Gide.Dismiss">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".natalie.RandomActivity"
-            android:theme="@style/Theme.Gide.Random"
-            android:exported="true">
-        </activity>
-
+            android:exported="true"
+            android:theme="@style/Theme.Gide.Random"></activity>
     </application>
 
 </manifest>
