@@ -18,7 +18,7 @@ public class EventEditActivity extends AppCompatActivity {
 
     private LocalTime time;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_edit);
         initWidgets();
