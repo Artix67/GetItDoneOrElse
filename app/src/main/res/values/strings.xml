@@ -51,5 +51,7 @@
     <string name="exit_button">Exit Button</string>
     <string name="random">RANDOM</string>
     <string name="google">google</string>
-    <string name="default_web_client_id" />
+    <string name="forgot_password_easily">forgot password?</string>
+    <string name="default_web_client_id"
+        />
 </resources>
