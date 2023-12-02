@@ -34,10 +34,10 @@ public class RegistrationScreen extends AppCompatActivity {
 
 
         auth = FirebaseAuth.getInstance();
-       // if (auth.getCurrentUser() !=null){
-           // startActivity(new Intent(RegistrationScreen.this, MainActivityMiki.class));
-           // finish();
-       // }
+        if (auth.getCurrentUser() !=null){
+            startActivity(new Intent(RegistrationScreen.this, MainActivityMiki.class));
+            finish();
+        }
 
 
         name = findViewById(R.id.editText4);

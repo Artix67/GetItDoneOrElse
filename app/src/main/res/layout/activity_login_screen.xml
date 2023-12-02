@@ -45,18 +45,20 @@
 
 
     <!-- ADD:: android:onClick="signinWgoogle" -->
+
+
     <ImageView
         android:id="@+id/imageViewG"
-        android:layout_width="381dp"
-        android:layout_height="816dp"
+        android:layout_width="35dp"
+        android:layout_height="31dp"
+        android:onClick="signUp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.505"
-        app:srcCompat="@drawable/google_logo" />
-
+        app:layout_constraintVertical_bias="0.65"
+        app:srcCompat="@drawable/just_right_g" />
 
     <TextView
         android:id="@+id/tosPreView"
@@ -98,7 +100,7 @@
         android:layout_height="33dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/poppins"
-        android:text="@string/forgot_password"
+        android:text="@string/forgot_password_easily"
         android:textColor="@color/gray"
         android:textSize="11sp"
         android:textStyle=""
@@ -131,13 +133,15 @@
         android:id="@+id/imageView3"
         android:layout_width="10dp"
         android:layout_height="10dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.543"
-        app:srcCompat="@color/select" />
+        app:srcCompat="@android:drawable/checkbox_on_background" />
 
     <TextView
         android:id="@+id/signupPreView"
@@ -171,7 +175,7 @@
         app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161" />
+        app:layout_constraintVertical_bias="0.160" />
 
 
     <!-- Password Section-->
@@ -190,7 +194,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.612" />
@@ -250,7 +254,7 @@
         android:layout_width="184dp"
         android:layout_height="53dp"
         android:fontFamily="@font/poppins"
-        android:hint="@string/username"
+        android:hint="@string/email"
         android:padding="4dp"
         android:textColor="@color/white"
         android:textColorHint="@color/gray"
@@ -261,6 +265,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.396"
         app:layout_constraintWidth_percent=" .8" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
