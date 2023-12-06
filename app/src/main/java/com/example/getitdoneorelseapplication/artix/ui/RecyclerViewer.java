@@ -1,4 +1,4 @@
-package com.example.getitdoneorelseapplication.artix;
+package com.example.getitdoneorelseapplication.artix.ui;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.ArrayList;
 
-public class RecyclerView extends AppCompatActivity {
+public class nestedViewRecycler extends AppCompatActivity {
 
     private ArrayList<Event> menuEventList = Event.eventList;
 
