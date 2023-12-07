@@ -23,7 +23,7 @@ public class MainActivityArtix extends AppCompatActivity {
         binding = ActivityMainArtrixBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Button myButton = findViewById(R.id.floatingActionButton3);
+        Button myButton = findViewById(R.id.AddEventButton);
 
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
