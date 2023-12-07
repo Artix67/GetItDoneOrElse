@@ -12,6 +12,10 @@ public class MainActivityApplication extends AppCompatActivity implements View.O
     private  Button btn2;
     private Button btn3;
 
+    private  Button btn4;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,12 +26,14 @@ public class MainActivityApplication extends AppCompatActivity implements View.O
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
+        btn4.setOnClickListener(this);
     }
 
 
     private void initWidgets() {
 
         btn = findViewById(R.id.buttonKevin);
+        btn4 = findViewById(R.id.buttonSetting);
         btn2 =  findViewById(R.id.buttonMiki);
         btn3 = findViewById(R.id.buttonNatalie);
         btn1 = findViewById(R.id.buttonArtix);
@@ -35,7 +41,8 @@ public class MainActivityApplication extends AppCompatActivity implements View.O
 
 
     @Override
-    public void onClick(View view) {
+    public void onClick(View view)
+    {
         if (view.getId() == R.id.buttonKevin) {
             // Your code for buttonKevin click
             Intent intent = new Intent(this, com.example.getitdoneorelseapplication.calendar.MainActivityCalendar.class);
@@ -51,6 +58,11 @@ public class MainActivityApplication extends AppCompatActivity implements View.O
         } else if (view.getId() == R.id.buttonArtix) {
             // Your code for buttonArtix click
             Intent intent = new Intent(this, com.example.getitdoneorelseapplication.artix.MainActivityArtix.class);
+            startActivity(intent);
+        }
+        else if (view.getId() == R.id.buttonSetting) {
+            // Your code for buttonsettingclick
+            Intent intent = new Intent(this, com.example.getitdoneorelseapplication.settings.SettingsActivity.class);
             startActivity(intent);
         }
     }
