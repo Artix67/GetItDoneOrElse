@@ -14,13 +14,13 @@ import com.example.getitdoneorelseapplication.databinding.ActivityMainArtrixBind
 
 public class MainActivityArtix extends AppCompatActivity {
 
-    private ActivityMainArtrixBinding binding;
+    private ActivityMainArtixBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainArtrixBinding.inflate(getLayoutInflater());
+        binding = ActivityMainArtixBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         Button myButton = findViewById(R.id.AddEventButton);
