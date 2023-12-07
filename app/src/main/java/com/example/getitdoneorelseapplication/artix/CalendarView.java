@@ -7,13 +7,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.getitdoneorelseapplication.calendar.MainActivityCalendar;
+import com.example.getitdoneorelseapplication.R;
 
 public class CalendarView extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_home.xml);
+        setContentView(R.layout.fragment_home);
 
         android.widget.CalendarView calendarView = findViewById(R.id.calendarView);
 
