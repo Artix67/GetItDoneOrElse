@@ -5,22 +5,30 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.getitdoneorelseapplication.calendar.Event;
+import com.example.getitdoneorelseapplication.R;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
-public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHolder> {
+public class RecyclerViewerAdapter extends RecyclerView.Adapter<RecyclerViewerAdapter.EventViewHolder> {
 
-    private List<Event> eventList;
+    public static ArrayList<Event> eventList = Event.eventList;
 
-    public EventAdapter(List<Event> eventList) {
+    public RecyclerViewerAdapter(ArrayList<Event> eventList) {
         this.eventList = eventList;
     }
 
     @NonNull
     @Override
     public EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.your_event_item_layout, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.event_item_layout, parent, false);
         return new EventViewHolder(view);
     }
 
@@ -44,7 +52,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         }
 
         public void bind(Event event) {
-            eventNameTextView.setText(event.getEventName()); // Replace with the actual method to get event name
+            eventNameTextView.setText(event.getName());
         }
     }
 }
