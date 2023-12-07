@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.getitdoneorelseapplication.R;
 import com.example.getitdoneorelseapplication.calendar.Event;
-import com.example.getitdoneorelseapplication.
 
 public class textViewID extends AppCompatActivity {
 
