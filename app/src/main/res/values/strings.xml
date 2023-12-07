@@ -56,4 +56,6 @@
     <string name="edit1">edit</string>
     <string name="panic_mode">Panic mode</string>
     <string name="character_selection">Character Selection</string>
+    <string name="email1">Email</string>
+    <string name="name1">Name</string>
 </resources>
