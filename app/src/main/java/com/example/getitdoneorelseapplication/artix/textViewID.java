@@ -5,16 +5,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.getitdoneorelseapplication.R;
 import com.example.getitdoneorelseapplication.calendar.Event;
+import com.example.getitdoneorelseapplication.
 
 public class textViewID extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.your_layout);
+        setContentView(R.layout.event_item_layout);
 
-        LinearLayout layout = findViewById(R.id.yourLinearLayout); // Replace with your actual layout ID
+        LinearLayout layout = findViewById(R.layout.event_item_layout);
 
         for (Event event : Event.eventList) {
             TextView textView = new TextView(this);
