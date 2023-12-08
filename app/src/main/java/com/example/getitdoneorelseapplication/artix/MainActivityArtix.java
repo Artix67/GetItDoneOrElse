@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.getitdoneorelseapplication.R;
 import com.example.getitdoneorelseapplication.calendar.EventEditActivity;
 import com.example.getitdoneorelseapplication.databinding.ActivityMainArtrixBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivityArtix extends AppCompatActivity {
 
@@ -23,7 +24,7 @@ public class MainActivityArtix extends AppCompatActivity {
         binding = ActivityMainArtrixBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Button myButton = findViewById(R.id.AddEventButton);
+        FloatingActionButton myButton = findViewById(R.id.AddEventButton);
 
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
