@@ -29,27 +29,23 @@ public class SettingsActivity extends AppCompatActivity {
         editTextText = findViewById(R.id.editTextText);
         editTextText2 = findViewById(R.id.editTextText2);
         editTextText3 = findViewById(R.id.editTextText3);
-        SwitchMaterial themeSwitch = findViewById(R.id.themeSwitch);
-        SwitchMaterial theme1Switch = findViewById(R.id.theme1Switch);
+        themeSwitch = findViewById(R.id.themeSwitch);  // Removed the redeclaration
+        theme1Switch = findViewById(R.id.theme1Switch);  // Removed the redeclaration
 
         Button editNameButton = findViewById(R.id.editNameButton);
         Button editEmailButton = findViewById(R.id.editEmailButton);
         Button saveButton = findViewById(R.id.button4);
 
         editNameButton.setOnClickListener(view -> editName());
-
         editEmailButton.setOnClickListener(view -> editEmail());
-
         saveButton.setOnClickListener(view -> saveSettings());
     }
 
     private void editName() {
-
         textInputEditText.setText("");
     }
 
     private void editEmail() {
-
         editTextText.setText("");
     }
 
