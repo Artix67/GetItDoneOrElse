@@ -16,7 +16,7 @@ import java.util.Objects;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    private TextInputEditText textInputEditText;
+    private TextInputEditText textInputEditText, emailEditText;
     private EditText editTextText, editTextText2, editTextText3;
     private SwitchMaterial themeSwitch, theme1Switch;
 
@@ -26,6 +26,7 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.setting_kevin);
 
         textInputEditText = findViewById(R.id.textInputEditText);
+        emailEditText = findViewById(R.id.emailEditText);
         editTextText = findViewById(R.id.editTextText);
         editTextText2 = findViewById(R.id.editTextText2);
         editTextText3 = findViewById(R.id.editTextText3);
@@ -46,7 +47,7 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void editEmail() {
-        editTextText.setText("");
+        emailEditText.setText("");
     }
 
     private void saveSettings() {
