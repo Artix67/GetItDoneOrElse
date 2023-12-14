@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#050505">
+
+<!-- Top Half with ViewPager for Swiping -->
+<androidx.viewpager.widget.ViewPager
+android:id="@+id/viewPager"
+android:layout_width="415dp"
+android:layout_height="478dp"
+android:background="#DA014F"
+android:layout_alignParentTop="true"
+android:layout_centerHorizontal="true"
+tools:ignore="SpeakableTextPresentCheck"
+tools:speak="false">
+
+<View
+android:id="@+id/divider"
+android:layout_width="0dp"
+android:layout_height="2dp"
+android:layout_marginTop="16dp"
+android:background="@android:color/black"
+tools:ignore="NotSibling" />
+
+</androidx.viewpager.widget.ViewPager>
+
+<!-- Bottom Half with Dark Background and Text Views -->
+<androidx.constraintlayout.widget.ConstraintLayout
+android:id="@+id/relativeLayout"
+android:layout_width="match_parent"
+android:layout_height="385dp"
+android:layout_below="@id/viewPager"
+android:layout_marginTop="-17dp"
+android:background="#050505">
+
+<!-- First Description Text -->
+<TextView
+android:id="@+id/characterNameTextView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_centerHorizontal="true"
+android:foregroundGravity="top"
+android:gravity="center|top"
+android:padding="16dp"
+android:text="Alex wants to help remind you"
+android:textColor="#979797"
+android:textSize="24sp"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+tools:ignore="HardcodedText" />
+
+<!-- Second Description Text Below the First One -->
+<TextView
+android:id="@+id/characterDescription"
+android:layout_width="384dp"
+android:layout_height="56dp"
+android:text="The character is a dog that will run out of the house every time you open the door of its loving household."
+android:textColor="#979797"
+android:textSize="16sp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/characterNameTextView"
+tools:ignore="HardcodedText,TextSizeCheck" />
+
+<!-- First Row of Switches -->
+
+<!-- Second Row of Switches -->
+<androidx.constraintlayout.widget.ConstraintLayout
+android:id="@+id/firstRowSwitches"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="1.0"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/characterDescription">
+
+<!-- Humorous Switch -->
+
+<com.google.android.material.switchmaterial.SwitchMaterial
+android:id="@+id/HumorousSwitch"
+android:layout_width="wrap_content"
+android:layout_height="52dp"
+android:layout_marginTop="16dp"
+android:text="@string/humorous"
+android:textColor="#7F7F7F"
+android:textSize="16sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toStartOf="@+id/AggressiveSwitch"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml,TextContrastCheck" />
+
+<com.google.android.material.switchmaterial.SwitchMaterial
+android:id="@+id/AggressiveSwitch"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="48dp"
+android:layout_marginTop="16dp"
+android:layout_marginBottom="4dp"
+android:minHeight="48dp"
+android:switchTextAppearance="@style/TextAppearance.AppCompat.Body1"
+android:text="@string/aggressive"
+android:textColor="#7F7F7F"
+android:textSize="16sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toEndOf="@+id/HumorousSwitch"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="1.0" />
+
+<!-- Aggressive Switch -->
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+android:id="@+id/secondRowSwitches"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/firstRowSwitches"
+tools:ignore="MissingConstraints">
+
+<!-- Enthusiastic Switch -->
+
+<!-- Nurturing Switch -->
+
+<com.google.android.material.switchmaterial.SwitchMaterial
+android:id="@+id/EnthusiasticSwitch"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="41dp"
+android:text="@string/enthusiastic"
+android:textColor="#7F7F7F"
+android:textSize="16sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent" />
+
+<com.google.android.material.switchmaterial.SwitchMaterial
+android:id="@+id/NurturingSwitch"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginEnd="52dp"
+android:text="@string/nurturing"
+android:textColor="#7F7F7F"
+android:textSize="16sp"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!-- ImageViews -->
+<ImageView
+android:id="@+id/imageAlexDog"
+android:layout_width="116dp"
+android:layout_height="92dp"
+android:layout_marginTop="21dp"
+android:layout_marginBottom="13dp"
+android:contentDescription="TODO"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toStartOf="@+id/imageView5"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
+app:srcCompat="@drawable/alex_dog"
+tools:ignore="ContentDescription,HardcodedText,MissingConstraints" />
+
+<ImageView
+android:id="@+id/imageView5"
+android:layout_width="97dp"
+android:layout_height="93dp"
+android:layout_marginTop="19dp"
+android:layout_marginBottom="13dp"
+android:contentDescription="TODO"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toStartOf="@+id/imageView6"
+app:layout_constraintStart_toEndOf="@+id/imageAlexDog"
+app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
+tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck"
+tools:srcCompat="@tools:sample/avatars" />
+
+<ImageView
+android:id="@+id/imageView6"
+android:layout_width="100dp"
+android:layout_height="95dp"
+android:layout_marginTop="17dp"
+android:layout_marginBottom="13dp"
+android:contentDescription="TODO"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toEndOf="@+id/imageView5"
+app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
+app:layout_constraintVertical_bias="0.0"
+tools:ignore="ContentDescription,HardcodedText"
+tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
