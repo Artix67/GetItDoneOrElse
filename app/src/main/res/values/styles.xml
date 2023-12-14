@@ -26,12 +26,13 @@
     <style name="BlackBar" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="android:background">#1A1A1A</item>
     </style>
-
-
+    <style name="PinkBarCharacter" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:background">#DA014F</item>
+    </style>
     <style name="OvalButtonStyle">BUTTON</style>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">#DA014F</item>
+    <style name="characterBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#050505</item>
+        <item name="android:elevation">0dp</item>
     </style>
-
 </resources>

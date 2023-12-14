@@ -61,40 +61,34 @@ public class CharacterSelection extends AppCompatActivity {
         // ...
     }
 
-    private void performGeneralActions() {
-        // Common actions for all modes when the switch is ON
-        showToast("Common actions for all modes!");
-        // Add more general actions as needed
-        // ...
-    }
 
     // Your switch listeners
     private void setSwitchListeners() {
         humorousSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 handleHumorousMode();
-                performGeneralActions();
+
             }
         });
 
         aggressiveSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 handleAggressiveMode();
-                performGeneralActions();
+
             }
         });
 
         enthusiasticSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 handleEnthusiasticMode();
-                performGeneralActions();
+
             }
         });
 
         nurturingSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 handleNurturingMode();
-                performGeneralActions();
+
             }
         });
     }

@@ -59,5 +59,6 @@
     <string name="alex_dog">alex_dog</string>
 	<string name="alex_wants_to_help_remind_you">Alex wants to help remind you</string>
     <string name="description_of_the_image">Description of the image</string>
+    <string name="todo">TODO</string>
 
 </resources>

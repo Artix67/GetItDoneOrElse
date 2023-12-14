@@ -29,7 +29,8 @@
         </activity>
         <activity
             android:name=".calendar.DailyCalendarActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Gide.CharacterSelection" />
         <activity
             android:name=".calendar.EventEditActivity"
             android:exported="false" />
@@ -88,7 +89,9 @@
         android:name=".natalie.RandomActivity"
         android:exported="true"
         android:theme="@style/Theme.Gide.Random" />
-        <activity android:name=".settings.CharacterSelection"/>
+        <activity
+        android:name=".settings.CharacterSelection"
+        android:theme="@style/Theme.Gide.CharacterSelection" />
     </application>
 
 </manifest>
