@@ -1,14 +1,12 @@
 package com.example.getitdoneorelseapplication.settings;
 
 import android.os.Bundle;
-import android.widget.Switch;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.getitdoneorelseapplication.R;
 import com.google.android.material.switchmaterial.SwitchMaterial;
-
-import java.util.Objects;
 
 public class CharacterSelection extends AppCompatActivity {
 
@@ -16,6 +14,7 @@ public class CharacterSelection extends AppCompatActivity {
     private SwitchMaterial aggressiveSwitch;
     private SwitchMaterial enthusiasticSwitch;
     private SwitchMaterial nurturingSwitch;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,27 +29,76 @@ public class CharacterSelection extends AppCompatActivity {
         setSwitchListeners();
     }
 
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    private void handleHumorousMode() {
+        // Actions specific to Humorous mode
+        showToast("Humorous mode activated!");
+        // Add more actions as needed
+        // ...
+    }
+
+    private void handleAggressiveMode() {
+        // Actions specific to Aggressive mode
+        showToast("Aggressive mode activated!");
+        // Add more actions as needed
+        // ...
+    }
+
+    private void handleEnthusiasticMode() {
+        // Actions specific to Enthusiastic mode
+        showToast("Enthusiastic mode activated!");
+        // Add more actions as needed
+        // ...
+    }
+
+    private void handleNurturingMode() {
+        // Actions specific to Nurturing mode
+        showToast("Nurturing mode activated!");
+        // Add more actions as needed
+        // ...
+    }
+
+    private void performGeneralActions() {
+        // Common actions for all modes when the switch is ON
+        showToast("Common actions for all modes!");
+        // Add more general actions as needed
+        // ...
+    }
+
+    // Your switch listeners
     private void setSwitchListeners() {
         humorousSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            // Handle Humorous switch state change
+            if (isChecked) {
+                handleHumorousMode();
+                performGeneralActions();
+            }
         });
 
         aggressiveSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            // Handle Aggressive switch state change
+            if (isChecked) {
+                handleAggressiveMode();
+                performGeneralActions();
+            }
         });
 
         enthusiasticSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            // Handle Enthusiastic switch state change
+            if (isChecked) {
+                handleEnthusiasticMode();
+                performGeneralActions();
+            }
         });
 
         nurturingSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            // Handle Nurturing switch state change
+            if (isChecked) {
+                handleNurturingMode();
+                performGeneralActions();
+            }
         });
     }
 
-    // TODO: Add your logic for handling ImageButtons
-
-    // TODO: Add any additional logic or listeners as needed
+    public void onImageClicked(View view) {
+    }
 }
-
-
