@@ -146,25 +146,26 @@ app:layout_constraintTop_toTopOf="parent" />
 
 <ImageView
 android:id="@+id/AlexThree"
-android:layout_width="150dp"
-android:layout_height="96dp"
-android:layout_marginStart="10dp"
-android:layout_marginTop="33dp"
-android:layout_marginEnd="-15dp"
+android:layout_width="120dp"
+android:layout_height="114dp"
+android:layout_marginStart="20dp"
+android:layout_marginTop="35dp"
+android:layout_marginEnd="20dp"
 android:clickable="true"
 android:contentDescription="@string/female"
 app:layout_constraintBottom_toBottomOf="parent"
 app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintStart_toEndOf="@+id/AlexTwo"
 app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
-app:srcCompat="@drawable/_rd"
+app:layout_constraintVertical_bias="0.542"
+app:srcCompat="@drawable/unlock"
 tools:ignore="ImageContrastCheck" />
 
 <ImageView
 android:id="@+id/AlexOne"
-android:layout_width="139dp"
-android:layout_height="97dp"
-android:layout_marginStart="8dp"
+android:layout_width="126dp"
+android:layout_height="111dp"
+android:layout_marginStart="20dp"
 android:layout_marginTop="20dp"
 android:background="@drawable/alex_dog"
 android:clickable="true"
@@ -233,12 +234,12 @@ tools:ignore="TextContrastCheck" />
 
 <ImageView
 android:id="@+id/AlexTwo"
-android:layout_width="122dp"
-android:layout_height="115dp"
+android:layout_width="142dp"
+android:layout_height="143dp"
 android:layout_marginStart="7dp"
-android:layout_marginTop="23dp"
+android:layout_marginTop="20dp"
 android:layout_marginEnd="-14dp"
-android:layout_marginBottom="-10dp"
+android:layout_marginBottom="-20dp"
 android:clickable="true"
 android:contentDescription="@string/description_of_the_image"
 android:onClick="onImageClicked"
@@ -247,6 +248,7 @@ app:layout_constraintEnd_toStartOf="@+id/AlexThree"
 app:layout_constraintHorizontal_bias="0.0"
 app:layout_constraintStart_toEndOf="@+id/AlexOne"
 app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
+app:layout_constraintVertical_bias="0.446"
 app:srcCompat="@drawable/_nd" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
