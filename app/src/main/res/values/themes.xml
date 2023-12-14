@@ -16,6 +16,9 @@
         <item name="colorPrimaryDark">#FF0055</item>
         <item name="colorAccent">#FF0055</item>
     </style>
-
+    <style name="Theme.Gide.CharacterSelection" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">#DA014F</item>
+        <item name="colorPrimaryDark">#050505</item>
+    </style>
     <style name="Theme.GetItDoneOrElseApplication" parent="Base.Theme.GetItDoneOrElseApplication" />
 </resources>

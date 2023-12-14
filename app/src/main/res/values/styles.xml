@@ -11,7 +11,10 @@
     <style name="PinkBar" parent="@style/Widget.AppCompat.ActionBar">
         <item name="android:background">#FF0055</item>
     </style>
-
+    <style name="Theme.Gide.CharacterSelection." parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">#DA014F</item>
+        <item name="colorPrimaryDark">#050505</item>
+    </style>
     <!-- Theme for DismissActivity -->
     <style name="Theme.DismissActivity" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="colorPrimary">#1A1A1A</item>
@@ -20,12 +23,15 @@
     </style>
 
     <!-- BlackBar style -->
-    <style name="BlackBar" parent="@style/Widget.AppCompat.ActionBar">
+    <style name="BlackBar" parent="Theme.AppCompat.DayNight.NoActionBar">
         <item name="android:background">#1A1A1A</item>
     </style>
 
-    <style name="AppTheme">theme</style>
 
     <style name="OvalButtonStyle">BUTTON</style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#DA014F</item>
+    </style>
 
 </resources>
