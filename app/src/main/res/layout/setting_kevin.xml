@@ -34,11 +34,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/alex_dog"/>
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/alex_dog" />
     </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
     <!-- Existing layout elements -->
@@ -170,7 +170,8 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText"
+    android:autofillHints="" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/themeSwitch"

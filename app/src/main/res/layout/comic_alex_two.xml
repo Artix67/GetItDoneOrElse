@@ -13,9 +13,10 @@ android:layout_height="wrap_content"
 android:orientation="vertical">
 
 <ImageView
+android:id="@+id/alexTwo"
 android:layout_width="match_parent"
-android:layout_height="match_parent"
 
+android:layout_height="match_parent"
 android:adjustViewBounds="true"
 android:contentDescription="@string/alex_two"
 android:scaleType="fitStart"

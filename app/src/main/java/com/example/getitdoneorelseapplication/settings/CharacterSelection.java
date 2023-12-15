@@ -7,7 +7,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.getitdoneorelseapplication.ComicActivity;
+import com.example.getitdoneorelseapplication.ComicAlexOneActivity;
+import com.example.getitdoneorelseapplication.ComicAlexThreeActivity;
+import com.example.getitdoneorelseapplication.ComicAlexTwoActivity;
 import com.example.getitdoneorelseapplication.R;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
@@ -18,8 +20,8 @@ public class CharacterSelection extends AppCompatActivity {
     private SwitchMaterial enthusiasticSwitch;
     private SwitchMaterial nurturingSwitch;
 
-    // Constant for intent extra key
-    private static final String LAYOUT_RESOURCE_ID_KEY = "layoutResourceId";
+    public CharacterSelection() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,15 +46,13 @@ public class CharacterSelection extends AppCompatActivity {
     private void handleModeActivation(String mode) {
         // Handle mode-specific actions
         showToast(mode + " mode activated!");
-        // Add more actions as needed
-        // ...
+
     }
 
     private void performGeneralActions() {
         // Perform common actions for all modes when the switch is ON
-        showToast("Common actions for all modes!");
-        // Add more general actions as needed
-        // ...
+        showToast("");
+
     }
 
     // Switch listeners
@@ -93,32 +93,17 @@ public class CharacterSelection extends AppCompatActivity {
     public void onImageClicked(View view) {
         int imageId = view.getId();
 
-        // Create an intent to start the ComicActivity
-        Intent intent = new Intent(this, ComicActivity.class);
-
-        // Determine which image was clicked based on its ID
-        int layoutResourceId = 0;  // Default value for unknown image ID
-
+        Intent intent;
         if (imageId == R.id.comic_alex_one) {
-            layoutResourceId = R.layout.comic_alex_one;
+            intent = new Intent(this, ComicAlexOneActivity.class);
         } else if (imageId == R.id.comic_alex_two) {
-            layoutResourceId = R.layout.comic_alex_two;
+            intent = new Intent(this, ComicAlexTwoActivity.class);
         } else if (imageId == R.id.comic_alex_three) {
-            layoutResourceId = R.layout.comic_alex_three;
-        }
-
-        // If layoutResourceId is still 0, it means an unknown image ID, do nothing
-        if (layoutResourceId == 0) {
+            intent = new Intent(this, ComicAlexThreeActivity.class);
+        } else {
             return;
         }
-
-        // Add the layout resource ID as an extra to the intent
-        intent.putExtra(LAYOUT_RESOURCE_ID_KEY, layoutResourceId);
-
-        // Start the ComicActivity
+        // Start the appropriate activity
         startActivity(intent);
     }
-
-
-
 }

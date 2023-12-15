@@ -9,16 +9,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.getitdoneorelseapplication.R;
-import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.android.material.textfield.TextInputEditText;
-
-import java.util.Objects;
 
 public class SettingsActivity extends AppCompatActivity {
 
     private TextInputEditText textInputEditText, emailEditText;
-    private EditText editTextText, editTextText2, editTextText3;
-    private SwitchMaterial themeSwitch, theme1Switch;
+    private EditText editTextText3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +23,11 @@ public class SettingsActivity extends AppCompatActivity {
 
         textInputEditText = findViewById(R.id.textInputEditText);
         emailEditText = findViewById(R.id.emailEditText);
-        editTextText = findViewById(R.id.editTextText);
-        editTextText2 = findViewById(R.id.editTextText2);
+        findViewById(R.id.editTextText);
+        findViewById(R.id.editTextText2);
         editTextText3 = findViewById(R.id.editTextText3);
-        themeSwitch = findViewById(R.id.themeSwitch);
-        theme1Switch = findViewById(R.id.theme1Switch);
+        findViewById(R.id.themeSwitch);
+        findViewById(R.id.theme1Switch);
 
         Button editNameButton = findViewById(R.id.editNameButton);
         Button editEmailButton = findViewById(R.id.editEmailButton);
@@ -51,22 +47,18 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void saveSettings() {
-        String name = Objects.requireNonNull(textInputEditText.getText()).toString();
-        String panicMode = editTextText.getText().toString();
-        String timeoutMode = editTextText2.getText().toString();
         String characterSelection = editTextText3.getText().toString();
-        boolean isThemeSwitchChecked = themeSwitch.isChecked();
-        boolean isTheme1SwitchChecked = theme1Switch.isChecked();
 
-        // Create an Intent to start the ActivityCharacters activity
+        // Create an Intent to start the CharacterSelection activity
         Intent intent = new Intent(this, CharacterSelection.class);
 
-        // Pass any necessary data to ActivityCharacters using Intent extras
+        // Pass any necessary data to CharacterSelection using Intent extras
         intent.putExtra("Character Selection", characterSelection);
 
-        // Start the ActivityCharacters activity
+        // Start the CharacterSelection activity
         startActivity(intent);
 
         Toast.makeText(this, "Settings saved", Toast.LENGTH_SHORT).show();
+        }
+
     }
-}

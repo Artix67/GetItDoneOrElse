@@ -13,14 +13,15 @@ android:layout_height="wrap_content"
 android:orientation="vertical">
 
 <ImageView
+android:id="@+id/alexThree"
 android:layout_width="match_parent"
-android:layout_height="match_parent"
 
+android:layout_height="match_parent"
 android:adjustViewBounds="true"
+android:contentDescription="@string/comic3"
 android:scaleType="fitStart"
 android:src="@drawable/comic_alex_tree"
-app:srcCompat="@drawable/comic_alex_tree"
-android:contentDescription="@string/comic3">
+app:srcCompat="@drawable/comic_alex_tree">
 
 </ImageView>
 

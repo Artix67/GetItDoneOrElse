@@ -2,6 +2,7 @@ package com.example.getitdoneorelseapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -39,11 +40,17 @@ public class ComicActivity extends AppCompatActivity {
     private void launchPopUpActivity(int layoutResourceId) {
         Intent intent = new Intent(this, CharacterSelection.class);
         intent.putExtra("layoutResourceId", layoutResourceId);
-        startActivity(intent);
+
+        try {
+            startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void onImageClicked(View view) {
         int imageId = view.getId();
+        Log.d("ImageClick", "Image clicked with ID: " + imageId);
 
         Intent intent = new Intent(this, CharacterSelection.class);
 

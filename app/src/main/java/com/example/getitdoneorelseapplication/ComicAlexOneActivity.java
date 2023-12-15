@@ -9,7 +9,7 @@ public class ComicAlexOneActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.characters_selection);
+        setContentView(R.layout.comic_alex_one);
 
     }
 }
