@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="#050505">
+android:layout_height="match_parent">
 
 <!-- Top Half with ViewPager for Swiping -->
 
+<!-- Bottom Half with Dark Background and Text Views -->
 <androidx.viewpager.widget.ViewPager
 android:id="@+id/viewPager"
 android:layout_width="match_parent"
-android:layout_height="334dp"
+android:layout_height="367dp"
 android:layout_alignParentTop="true"
-android:layout_centerHorizontal="true"
-android:background="#DA014F"
+android:layout_marginTop="2dp"
+android:background="@drawable/alex"
 tools:ignore="SpeakableTextPresentCheck"
 tools:speak="false">
 
@@ -37,13 +36,12 @@ tools:ignore="NotSibling" />
 
 </androidx.viewpager.widget.ViewPager>
 
-<!-- Bottom Half with Dark Background and Text Views -->
 <androidx.constraintlayout.widget.ConstraintLayout
 android:id="@+id/relativeLayout"
 android:layout_width="match_parent"
-android:layout_height="578dp"
+android:layout_height="523dp"
 android:layout_below="@id/viewPager"
-android:layout_marginTop="11dp"
+android:layout_marginTop="-1dp"
 android:background="#050505"
 tools:ignore="TextSizeCheck">
 
@@ -146,7 +144,7 @@ android:layout_marginStart="6dp"
 android:layout_marginTop="1dp"
 android:layout_marginBottom="27dp"
 android:checked="true"
-app:layout_constraintBottom_toTopOf="@+id/imageAlexDog"
+app:layout_constraintBottom_toTopOf="@+id/comic_alex_two"
 app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/firstRowSwitches"
@@ -192,54 +190,57 @@ tools:ignore="TextContrastCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 <ImageView
-android:id="@+id/Male"
-android:layout_width="104dp"
-android:layout_height="108dp"
+android:id="@+id/comic_alex_one"
+android:layout_width="137dp"
+android:layout_height="107dp"
 android:layout_marginStart="10dp"
 android:layout_marginTop="29dp"
 android:layout_marginEnd="1dp"
 android:layout_marginBottom="29dp"
-android:background="@drawable/male2"
 android:clickable="true"
-android:contentDescription="@string/male"
+android:contentDescription="@string/comic_alex_one"
+android:contextClickable="true"
 app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toStartOf="@+id/imageAlexDog"
+app:layout_constraintEnd_toStartOf="@+id/comic_alex_two"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
-tools:srcCompat="?attr/actionBarDivider" />
+app:srcCompat="@drawable/comic_alex_ones"
+tools:ignore="ImageContrastCheck" />
 
 <ImageView
-android:id="@+id/imageAlexDog"
-android:layout_width="138dp"
-android:layout_height="111dp"
+android:id="@+id/comic_alex_two"
+android:layout_width="141dp"
+android:layout_height="102dp"
 android:layout_marginStart="5dp"
-android:layout_marginEnd="-10dp"
-android:layout_marginBottom="30dp"
+android:layout_marginTop="5dp"
+android:layout_marginEnd="3dp"
+android:layout_marginBottom="54dp"
 android:clickable="true"
 android:contentDescription="@string/description_of_the_image"
 android:onClick="onImageClicked"
 app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toStartOf="@+id/Female"
-app:layout_constraintHorizontal_bias="0.5"
-app:layout_constraintStart_toEndOf="@+id/Male"
+app:layout_constraintEnd_toStartOf="@+id/comic_alex_three"
+app:layout_constraintStart_toEndOf="@+id/comic_alex_one"
 app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
-app:srcCompat="@drawable/alex_dog" />
+app:srcCompat="@drawable/comic_alex_twos" />
 
 <ImageView
-android:id="@+id/Female"
-android:layout_width="139dp"
-android:layout_height="107dp"
+android:id="@+id/comic_alex_three"
+android:layout_width="128dp"
+android:layout_height="110dp"
 android:layout_marginStart="5dp"
-android:layout_marginTop="28dp"
-android:layout_marginBottom="34dp"
+android:layout_marginTop="20dp"
+android:layout_marginEnd="5dp"
+android:layout_marginBottom="30dp"
 android:clickable="true"
-android:contentDescription="@string/female"
+android:contentDescription="@string/alex_three"
 app:layout_constraintBottom_toBottomOf="parent"
 app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintHorizontal_bias="0.5"
-app:layout_constraintStart_toEndOf="@+id/imageAlexDog"
+app:layout_constraintHorizontal_bias="1.0"
+app:layout_constraintStart_toEndOf="@+id/comic_alex_two"
 app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
-app:srcCompat="@drawable/female"
+app:layout_constraintVertical_bias="0.609"
+app:srcCompat="@drawable/comic_alex_three"
 tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

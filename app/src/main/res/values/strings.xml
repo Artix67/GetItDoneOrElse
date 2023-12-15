@@ -54,10 +54,13 @@
     <string name="forgot_password_easily">forgot password?</string>
     <string name="default_web_client_id" />
     <string name="humorous">Humorous</string>
-	<string name="male">Male</string>
-    <string name="female">Female</string>
     <string name="alex_dog">alex_dog</string>
 	<string name="alex_wants_to_help_remind_you">Alex wants to help remind you</string>
     <string name="description_of_the_image">Description of the image</string>
+    <string name="comic3">comic3</string>
+    <string name="comic_alex_one">one</string>
+    <string name="alex_two">two</string>
+    <string name="alex_one">one</string>
+    <string name="alex_three">three</string>
 
 </resources>
