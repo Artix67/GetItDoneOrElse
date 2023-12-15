@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <!-- Permissions and other application settings -->
 
     <application
         android:allowBackup="true"
@@ -15,64 +14,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GetItDoneOrElseApplication"
         tools:targetApi="31">
+
+        <!-- Existing activity declarations -->
+
+        <activity
+            android:name=".settings.CharacterSelection"
+            android:exported="false" />
+
         <activity
             android:name=".settings.SettingsActivity"
             android:exported="false" />
+
+        <!-- Ensure MainActivity has the LAUNCHER intent filter -->
         <activity
             android:name=".MainActivityApplication"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".calendar.DailyCalendarActivity"
-            android:exported="false" />
-        <activity
-            android:name=".calendar.EventEditActivity"
-            android:exported="false" />
-        <activity
-            android:name=".calendar.WeekViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".calendar.MainActivityCalendar"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <!-- Correctly define ComicActivity -->
         <activity
-            android:name=".artix.MainActivityArtix"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".login.RegistrationScreen"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".login.LoginScreen"
+            android:name=".ComicActivity"
             android:exported="false" />
-        <activity
-        android:name=".login.MainActivityMiki"
-        android:exported="true" />
+
+        <!-- Existing activity declarations -->
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <!-- Existing activity declarations -->
 
         <activity
             android:name=".natalie.DismissActivity"
@@ -80,15 +54,16 @@
             android:theme="@style/Theme.Gide.Dismiss">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-        android:name=".natalie.RandomActivity"
-        android:exported="true"
-        android:theme="@style/Theme.Gide.Random" />
-        <activity android:name=".settings.CharacterSelection"/>
-    </application>
 
+        <activity
+            android:name=".natalie.RandomActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Gide.Random" />
+
+        <!-- Existing activity declarations -->
+
+    </application>
 </manifest>
