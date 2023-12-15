@@ -1,10 +1,13 @@
 package com.example.getitdoneorelseapplication.settings;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.getitdoneorelseapplication.ComicActivity;
 import com.example.getitdoneorelseapplication.R;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
@@ -100,5 +103,23 @@ public class CharacterSelection extends AppCompatActivity {
     }
 
     public void onImageClicked(View view) {
+        int imageId = view.getId();
+
+        Intent intent = new Intent(this, ComicActivity.class);
+
+        // Determine which image was clicked based on its ID
+        int layoutResourceId;
+        if (imageId == R.id.comic_alex_one) {
+            layoutResourceId = R.layout.comic_alex_one;
+        } else if (imageId == R.id.comic_alex_two) {
+            layoutResourceId = R.layout.comic_alex_two;
+        } else if (imageId == R.id.comic_alex_three) {
+            layoutResourceId = R.layout.comic_alex_three;
+        } else {
+            return;
+        }
+
+        intent.putExtra("layoutResourceId", layoutResourceId);
+        startActivity(intent);
     }
 }
