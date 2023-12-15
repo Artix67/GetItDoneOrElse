@@ -46,7 +46,7 @@ public class CharacterSelection extends AppCompatActivity {
 
             @Override
             public void onPageScrollStateChanged(int state) {
-                // Not needed for this implementation
+
             }
         });
     }
@@ -58,29 +58,24 @@ public class CharacterSelection extends AppCompatActivity {
     private void handleHumorousMode() {
         // Actions specific to Humorous mode
         showToast("Humorous mode activated!");
-        // Add more actions as needed
-        // ...
     }
 
     private void handleAggressiveMode() {
         // Actions specific to Aggressive mode
         showToast("Aggressive mode activated!");
-        // Add more actions as needed
-        // ...
+
     }
 
     private void handleEnthusiasticMode() {
         // Actions specific to Enthusiastic mode
         showToast("Enthusiastic mode activated!");
-        // Add more actions as needed
-        // ...
+
     }
 
     private void handleNurturingMode() {
         // Actions specific to Nurturing mode
         showToast("Nurturing mode activated!");
-        // Add more actions as needed
-        // ...
+
     }
 
     // Your switch listeners
