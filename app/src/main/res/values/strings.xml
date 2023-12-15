@@ -53,11 +53,10 @@
     <string name="google">google</string>
     <string name="forgot_password_easily">forgot password?</string>
     <string name="default_web_client_id" />
-    <string name="humorous">Humorous</string>
-	<string name="male">Male</string>
-    <string name="female">Female</string>
     <string name="alex_dog">alex_dog</string>
-	<string name="alex_wants_to_help_remind_you">Alex wants to help remind you</string>
-    <string name="description_of_the_image">Description of the image</string>
-
+    <string name="alex_wants_to_help_remind_you">Alex wants to help remind you</string>
+    <string name="description_of_the_image">This character is a dog that will run out the house every time you open the door of its loving home</string>
+    <string name="AlexOne">alexone</string>
+    <string name="AlexThree">alexthree</string>
+    <string name="describeimage">DescribeImage</string>
 </resources>

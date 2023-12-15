@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="CellDayText" type="id" />
-    <string name="enthusiastic">Enthusiastic</string>
+<item name="CellDayText" type="id" />
+	<string name="enthusiastic">Enthusiastic</string>
     <string name="nurturing">Nurturing</string>
     <string name="aggressive">Aggressive</string>
+	<string name="humorous">Humorous</string>
 </resources>

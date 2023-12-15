@@ -8,14 +8,13 @@ android:layout_height="match_parent"
 android:background="#050505">
 
 <!-- Top Half with ViewPager for Swiping -->
-
 <androidx.viewpager.widget.ViewPager
 android:id="@+id/viewPager"
 android:layout_width="match_parent"
-android:layout_height="334dp"
+android:layout_height="337dp"
 android:layout_alignParentTop="true"
-android:layout_centerHorizontal="true"
-android:background="#DA014F"
+android:layout_marginTop="4dp"
+android:background="@drawable/alex"
 tools:ignore="SpeakableTextPresentCheck"
 tools:speak="false">
 
@@ -23,7 +22,8 @@ tools:speak="false">
 android:id="@+id/characterScrollView"
 android:layout_width="match_parent"
 android:layout_height="wrap_content"
-android:background="#DA014F">
+android:background="@drawable/alex">
+
 
 </ScrollView>
 
@@ -41,21 +41,20 @@ tools:ignore="NotSibling" />
 <androidx.constraintlayout.widget.ConstraintLayout
 android:id="@+id/relativeLayout"
 android:layout_width="match_parent"
-android:layout_height="578dp"
+android:layout_height="559dp"
 android:layout_below="@id/viewPager"
-android:layout_marginTop="11dp"
+android:layout_marginTop="25dp"
 android:background="#050505"
 tools:ignore="TextSizeCheck">
 
 <TextView
 android:id="@+id/characterNameTextView"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
+android:layout_width="392dp"
+android:layout_height="71dp"
 android:layout_centerHorizontal="true"
-android:layout_marginStart="29dp"
-android:layout_marginTop="16dp"
-android:layout_marginEnd="51dp"
-android:layout_marginBottom="-10dp"
+android:layout_marginStart="11dp"
+android:layout_marginTop="12dp"
+android:layout_marginEnd="8dp"
 android:contentDescription="Description of the characterNameTextView"
 android:foregroundGravity="top"
 android:gravity="center|top"
@@ -67,31 +66,34 @@ app:layout_constraintBottom_toTopOf="@+id/characterDescription"
 app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toTopOf="parent"
-tools:ignore="HardcodedText" />
+tools:ignore="HardcodedText,TextSizeCheck" />
 
 <TextView
 android:id="@+id/characterDescription"
-android:layout_width="392dp"
+android:layout_width="0dp"
 android:layout_height="66dp"
 android:layout_marginStart="10dp"
 android:layout_marginEnd="10dp"
+android:layout_marginBottom="6dp"
 android:gravity="center"
-android:text="The character is a dog that will run out of the house every time you open the door of its loving household."
+android:text="This character is a dog that will run out the house every time you open the door of its loving home"
 android:textColor="#979797"
 android:textSize="16sp"
 app:layout_constraintBottom_toTopOf="@+id/firstRowSwitches"
 app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="1.0"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/characterNameTextView"
 tools:ignore="HardcodedText,TextSizeCheck" />
 
 <androidx.constraintlayout.widget.ConstraintLayout
 android:id="@+id/firstRowSwitches"
-android:layout_width="391dp"
+android:layout_width="0dp"
 android:layout_height="64dp"
-android:layout_marginStart="12dp"
-android:layout_marginEnd="8dp"
+android:layout_marginStart="11dp"
+android:layout_marginEnd="9dp"
 android:checked="true"
+app:layout_constraintBottom_toTopOf="@+id/secondRowSwitches"
 app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/characterDescription">
@@ -99,9 +101,9 @@ app:layout_constraintTop_toBottomOf="@+id/characterDescription">
 <!-- Humorous Switch -->
 <com.google.android.material.switchmaterial.SwitchMaterial
 android:id="@+id/HumorousSwitch"
-android:layout_width="171dp"
+android:layout_width="0dp"
 android:layout_height="52dp"
-android:layout_marginStart="26dp"
+android:layout_marginStart="20dp"
 android:layout_marginTop="4dp"
 android:layout_marginEnd="1dp"
 android:layout_marginBottom="8dp"
@@ -111,19 +113,21 @@ android:textColor="#7F7F7F"
 android:textSize="16sp"
 app:layout_constraintBottom_toBottomOf="parent"
 app:layout_constraintEnd_toStartOf="@+id/AggressiveSwitch"
+app:layout_constraintHorizontal_bias="0.0"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.0"
 tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml,TextContrastCheck" />
 
 <!-- Aggressive Switch -->
 <com.google.android.material.switchmaterial.SwitchMaterial
 android:id="@+id/AggressiveSwitch"
-android:layout_width="154dp"
-android:layout_height="48dp"
-android:layout_marginStart="5dp"
-android:layout_marginTop="6dp"
-android:layout_marginEnd="26dp"
-android:layout_marginBottom="12dp"
+android:layout_width="0dp"
+android:layout_height="54dp"
+android:layout_marginStart="26dp"
+android:layout_marginTop="4dp"
+android:layout_marginEnd="20dp"
+android:layout_marginBottom="6dp"
 android:checked="true"
 android:minHeight="48dp"
 android:switchTextAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -133,36 +137,65 @@ android:textSize="16sp"
 app:layout_constraintBottom_toBottomOf="parent"
 app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintStart_toEndOf="@+id/HumorousSwitch"
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintVertical_bias="1.0" />
+app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
+<ImageView
+android:id="@+id/AlexThree"
+android:layout_width="120dp"
+android:layout_height="114dp"
+android:layout_marginStart="20dp"
+android:layout_marginTop="35dp"
+android:layout_marginEnd="20dp"
+android:contentDescription="@string/AlexThree"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toEndOf="@+id/AlexTwo"
+app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
+app:layout_constraintVertical_bias="0.542"
+app:srcCompat="@drawable/unlock"
+tools:ignore="ImageContrastCheck" />
+
+<ImageView
+android:id="@+id/AlexOne"
+android:layout_width="126dp"
+android:layout_height="111dp"
+android:layout_marginStart="20dp"
+android:layout_marginTop="20dp"
+android:background="@drawable/alex_dog"
+android:contentDescription="@string/AlexOne"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toStartOf="@+id/AlexTwo"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
+tools:ignore="ImageContrastCheck"
+tools:srcCompat="?attr/actionBarDivider" />
 
 <androidx.constraintlayout.widget.ConstraintLayout
 android:id="@+id/secondRowSwitches"
-android:layout_width="405dp"
-android:layout_height="71dp"
-android:layout_marginStart="6dp"
-android:layout_marginTop="1dp"
-android:layout_marginBottom="27dp"
+android:layout_width="0dp"
+android:layout_height="66dp"
+android:layout_marginStart="14dp"
+android:layout_marginTop="-10dp"
+android:layout_marginEnd="13dp"
+android:layout_marginBottom="15dp"
 android:checked="true"
-app:layout_constraintBottom_toTopOf="@+id/imageAlexDog"
+app:layout_constraintBottom_toTopOf="@+id/AlexOne"
 app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/firstRowSwitches"
 tools:ignore="MissingConstraints">
 
 <!-- Enthusiastic Switch -->
-
-<!-- Nurturing Switch -->
-
 <com.google.android.material.switchmaterial.SwitchMaterial
 android:id="@+id/NurturingSwitch"
-android:layout_width="156dp"
+android:layout_width="0dp"
 android:layout_height="53dp"
-android:layout_marginTop="8dp"
-android:layout_marginEnd="40dp"
-android:layout_marginBottom="10dp"
+android:layout_marginStart="26dp"
+android:layout_marginTop="6dp"
+android:layout_marginEnd="20dp"
+android:layout_marginBottom="6dp"
 android:checked="true"
 android:text="@string/nurturing"
 android:textColor="#7F7F7F"
@@ -172,14 +205,14 @@ app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintStart_toEndOf="@+id/EnthusiasticSwitch"
 app:layout_constraintTop_toTopOf="parent" />
 
+<!-- Nurturing Switch -->
 <com.google.android.material.switchmaterial.SwitchMaterial
 android:id="@+id/EnthusiasticSwitch"
-android:layout_width="169dp"
-android:layout_height="52dp"
-android:layout_marginStart="30dp"
-android:layout_marginTop="9dp"
-android:layout_marginEnd="10dp"
-android:layout_marginBottom="10dp"
+android:layout_width="0dp"
+android:layout_height="53dp"
+android:layout_marginStart="20dp"
+android:layout_marginTop="6dp"
+android:layout_marginBottom="6dp"
 android:checked="true"
 android:text="@string/enthusiastic"
 android:textColor="#7F7F7F"
@@ -189,58 +222,25 @@ app:layout_constraintEnd_toStartOf="@+id/NurturingSwitch"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toTopOf="parent"
 tools:ignore="TextContrastCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 <ImageView
-android:id="@+id/Male"
-android:layout_width="104dp"
-android:layout_height="108dp"
-android:layout_marginStart="10dp"
-android:layout_marginTop="29dp"
-android:layout_marginEnd="1dp"
-android:layout_marginBottom="29dp"
-android:background="@drawable/male2"
-android:clickable="true"
-android:contentDescription="@string/male"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toStartOf="@+id/imageAlexDog"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
-tools:srcCompat="?attr/actionBarDivider" />
-
-<ImageView
-android:id="@+id/imageAlexDog"
-android:layout_width="138dp"
-android:layout_height="111dp"
-android:layout_marginStart="5dp"
-android:layout_marginEnd="-10dp"
-android:layout_marginBottom="30dp"
-android:clickable="true"
+android:id="@+id/AlexTwo"
+android:layout_width="142dp"
+android:layout_height="143dp"
+android:layout_marginStart="7dp"
+android:layout_marginTop="20dp"
+android:layout_marginEnd="-14dp"
+android:layout_marginBottom="-20dp"
 android:contentDescription="@string/description_of_the_image"
-android:onClick="onImageClicked"
 app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toStartOf="@+id/Female"
-app:layout_constraintHorizontal_bias="0.5"
-app:layout_constraintStart_toEndOf="@+id/Male"
+app:layout_constraintEnd_toStartOf="@+id/AlexThree"
+app:layout_constraintHorizontal_bias="0.0"
+app:layout_constraintStart_toEndOf="@+id/AlexOne"
 app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
-app:srcCompat="@drawable/alex_dog" />
-
-<ImageView
-android:id="@+id/Female"
-android:layout_width="139dp"
-android:layout_height="107dp"
-android:layout_marginStart="5dp"
-android:layout_marginTop="28dp"
-android:layout_marginBottom="34dp"
-android:clickable="true"
-android:contentDescription="@string/female"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintHorizontal_bias="0.5"
-app:layout_constraintStart_toEndOf="@+id/imageAlexDog"
-app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
-app:srcCompat="@drawable/female"
-tools:ignore="ImageContrastCheck" />
+app:layout_constraintVertical_bias="0.446"
+app:srcCompat="@drawable/_nd" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

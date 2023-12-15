@@ -30,8 +30,8 @@ public class SettingsActivity extends AppCompatActivity {
         editTextText = findViewById(R.id.editTextText);
         editTextText2 = findViewById(R.id.editTextText2);
         editTextText3 = findViewById(R.id.editTextText3);
-        themeSwitch = findViewById(R.id.themeSwitch);  // Removed the redeclaration
-        theme1Switch = findViewById(R.id.theme1Switch);  // Removed the redeclaration
+        themeSwitch = findViewById(R.id.themeSwitch);
+        theme1Switch = findViewById(R.id.theme1Switch);
 
         Button editNameButton = findViewById(R.id.editNameButton);
         Button editEmailButton = findViewById(R.id.editEmailButton);
