@@ -23,12 +23,12 @@ public class ComicActivity extends AppCompatActivity {
 
         alexOneImageView.setOnClickListener(v -> {
             // Handle the click event for AlexOneImageView
-            launchPopUpActivity(R.layout.comic_alex_one);
+            launchPopUpActivity(R.layout.comic_alex_two);
         });
 
         alexTwoImageView.setOnClickListener(v -> {
             // Handle the click event for AlexTwoImageView
-            launchPopUpActivity(R.layout.comic_alex_two);
+            launchPopUpActivity(R.layout.comic_alex_one);
         });
 
         alexThreeImageView.setOnClickListener(v -> {
@@ -57,9 +57,9 @@ public class ComicActivity extends AppCompatActivity {
         // Determine which image was clicked based on its ID
         int layoutResourceId;
         if (imageId == R.id.comic_alex_one) {
-            layoutResourceId = R.layout.comic_alex_one;
-        } else if (imageId == R.id.comic_alex_two) {
             layoutResourceId = R.layout.comic_alex_two;
+        } else if (imageId == R.id.comic_alex_two) {
+            layoutResourceId = R.layout.comic_alex_one;
         } else if (imageId == R.id.comic_alex_three) {
             layoutResourceId = R.layout.comic_alex_three;
         } else {

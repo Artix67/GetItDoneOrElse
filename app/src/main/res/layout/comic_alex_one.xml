@@ -1,5 +1,4 @@
 
-
 <ScrollView
 xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -14,15 +13,16 @@ android:layout_height="wrap_content"
 android:orientation="vertical">
 
 <ImageView
-android:id="@+id/alexOne"
+android:id="@+id/alexTwo"
 android:layout_width="match_parent"
 
 android:layout_height="match_parent"
 android:adjustViewBounds="true"
-android:contentDescription="@string/alex_one"
+android:contentDescription="@string/alex_two"
 android:scaleType="fitStart"
-android:src="@drawable/comic_alex_one"
-app:srcCompat="@drawable/comic_alex_one">
+android:src="@drawable/comic_alex_two"
+app:srcCompat="@drawable/comic_alex_two"
+tools:ignore="ImageContrastCheck">
 
 </ImageView>
 
