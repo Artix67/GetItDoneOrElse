@@ -62,5 +62,6 @@
     <string name="alex_two">two</string>
     <string name="alex_one">one</string>
     <string name="alex_three">three</string>
+    <string name="randomAlex">randomalex</string>
 
 </resources>

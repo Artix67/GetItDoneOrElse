@@ -208,6 +208,7 @@ app:layout_constraintBottom_toBottomOf="parent"
 app:layout_constraintEnd_toStartOf="@+id/comic_alex_two"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/secondRowSwitches"
+app:layout_constraintVertical_bias="0.36"
 app:srcCompat="@drawable/comic_alex_three"
 tools:ignore="ImageContrastCheck" />
 
